@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% load static %}
+{#{% load extra_functions %}#}
+<html>
+    <title>Home</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" type="text/css" href="#">
+    <link rel="apple-touch-icon" type="text/css" href="#">
+    <link rel="stylesheet" type="text/css" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'lib/Owl/dist/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'lib/Owl/dist/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/media.css' %}">
+    {% block css %}
+
+    {% endblock %}
+</html>
+<body>
+<header>
+		<nav class="row-nav">
+			<ul class="nav-ul">
+				<li class="row-li"><a href="#">Главная</a></li>
+				<li class="row-li"><a href="#">О министерстве</a></li>
+				<li class="row-li"><a href="#">Пресс-центр</a></li>
+				<li class="row-li"><a href="#">Госуслуги</a></li>
+				<li class="row-li"><a href="#">Обращения</a></li>
+				<li class="row-li"><a href="#">Реестр НПА</a></li>
+				<li class="row-li"><a href="#">Интерактивные услуги</a></li>
+				<li class="row-li"><a href="#">Контакты</a></li>
+			</ul>
+			<div class="header-btn-div">
+				<button class="header-btn">
+					<img src="{% static 'image/home/menu.png' %}">
+				</button>
+			</div>
+		</nav>
+		<div class="m-btn-div">
+			<button class="m-btn">
+				<img src="{% static 'image/home/menu.png' %}">
+			</button>
+		</div>
+	</header>
+	<section class="full-menu">
+		<div class="container">
+			 <div class="row full-row">
+			 	<div class="col-md-3">
+			 		<a class="full-top-link" href="#!">Главная</a>
+			 	</div>
+			 	<div class="col-md-3">
+			 		<a class="full-top-link" href="#!">О министерстве</a>
+			 	</div>
+			 	<div class="col-md-3">
+			 		<a class="full-top-link" href="#!">Пресс-центр</a>
+			 	</div>
+			 	<div class="col-md-3">
+			 		<a class="full-top-link" href="#!">Госуслуги</a>
+			 	</div>
+			 	<div class="col-md-3">
+			 		<a class="full-top-link" href="#!">Обращения</a>
+			 	</div>
+			 	<div class="col-md-3">
+			 		<a class="full-top-link" href="#!">Реестр НПА</a>
+			 	</div>
+			 	<div class="col-md-3">
+			 		<a class="full-top-link" href="#!">Интерактивные услуги</a>
+			 	</div>
+			 	<div class="col-md-3">
+			 		<a class="full-top-link" href="#!">Контакты</a>
+			 	</div>
+
+			 </div>
+		</div>
+	</section>
+	<section class="hmobil">
+		<ul>
+			<li class="mob-li"><a href="#">Главная</a></li>
+			<li class="mob-li"><a href="#">О министерстве</a></li>
+			<li class="mob-li"><a href="#">Пресс-центр</a></li>
+			<li class="mob-li"><a href="#">Госуслуги</a></li>
+			<li class="mob-li"><a href="#">Обращения</a></li>
+			<li class="mob-li"><a href="#">Реестр НПА</a></li>
+			<li class="mob-li"><a href="#">Интерактивные услуги</a></li>
+			<li class="mob-li"><a href="#">Контакты</a></li>
+		</ul>
+	</section>
+	<main class="menu">
+		<div class="mfa-link">
+			<div class="m-left">
+				<a href="#!">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					По происшествиям 102
+				</a>
+			</div>
+			<div class="m-center">
+				<a href="#!">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+				<a href="#!">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="#!">
+					<i class="fa fa-telegram" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div class="m-right">
+				<form class="search-form">
+					<button>
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+					<input type="text" name="search" placeholder="Поиск">
+				</form>
+			</div>
+		</div>
+		<div class="m-lang-div">
+			<a href="#!">Русский</a>
+			<a href="#!">O'zbekcha</a>
+			<a href="#!">English</a>
+		</div>
+		<div class="m-logo">
+			<a href="#!">
+				<img src="{% static 'image/home/logo.png' %}">
+			</a>
+		</div>
+		<div class="menu-ul-div">
+			<ul class="menu-ul">
+				<li class="m-row-li"><a href="#">Главная</a></li>
+				<li class="m-row-li"><a href="#">О министерстве</a></li>
+				<li class="m-row-li"><a href="#">Пресс-центр</a></li>
+				<li class="m-row-li"><a href="#">Госуслуги</a></li>
+				<li class="m-row-li"><a href="#">Обращения</a></li>
+				<li class="m-row-li"><a href="#">Реестр НПА</a></li>
+				<li class="m-row-li"><a href="#">Интерактивные услуги</a></li>
+				<li class="m-row-li"><a href="#">Контакты</a></li>
+			</ul>
+		</div>
+	</main>
+
+{% block content %}
+
+{% endblock %}
+</body>

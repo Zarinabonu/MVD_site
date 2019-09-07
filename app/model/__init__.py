@@ -1,1 +1,1 @@
-from .menu import ListContent, DetailContent, Type, Menu
+from .menu import Type_news, Type_form, News, Menu, Forms, Criminal, Type

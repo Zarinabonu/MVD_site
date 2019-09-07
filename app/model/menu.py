@@ -13,20 +13,8 @@ class Menu(models.Model):
         return self.name_ru
 
 
-class Type(models.Model):
-    name_ru = models.CharField(max_length=100, null=True, blank=True)
-    name_uz = models.CharField(max_length=100, null=True, blank=True)
 
-
-    class Meta:
-        ordering = ('-id',)
-        db_table = 'type'
-
-    def __str__(self):
-        return self.name_ru
-
-
-class Submenu(models.Model):
+class   Submenu(models.Model):
     menu = models.ForeignKey('Menu', on_delete=models.CASCADE)
     name_uz = models.CharField(max_length=100, null=True, blank=True)
     name_ru = models.CharField(max_length=100, null=True, blank=True)
@@ -40,32 +28,69 @@ class Submenu(models.Model):
         return self.name_ru
 
 
-class ListContent(models.Model):
-    submenu = models.ForeignKey('Submenu', on_delete=models.CASCADE)
-    name_uz_title = models.CharField(max_length=100, null=True, blank=True)
-    name_ru_title = models.CharField(max_length=100, null=True, blank=True)
-    name_uz_description = models.CharField(max_length=100, null=True, blank=True)
-    name_ru_description = models.CharField(max_length=100, null=True, blank=True)
-    source = models.CharField(max_length=100, null=True, blank=True)
-    view = models.IntegerField()
-    image = models.ImageField()
-    date = models.DateField(auto_now_add=True)
-    file = models.FileField(null=True, blank=True)
+class Type(models.Model):
+    name_ru = models.CharField(max_length=100, null=True, blank=True)
+    name_uz = models.CharField(max_length=100, null=True, blank=True)
 
 
-class DetailContent(models.Model):
-    submenu = models.OneToOneField('Submenu', on_delete=models.CASCADE)
-    name_uz_title = models.CharField(max_length=100, null=True, blank=True)
-    name_ru_title = models.CharField(max_length=100, null=True, blank=True)
-    name_uz_description = models.CharField(max_length=100, null=True, blank=True)
-    name_ru_description = models.CharField(max_length=100, null=True, blank=True)
-    source = models.CharField(max_length=100, null=True, blank=True)
-    view = models.IntegerField()
-    image = models.ImageField()
-    date = models.DateField(auto_now_add=True)
-    file = models.FileField(null=True, blank=True)
-    start_date = models.DateField(null=True, blank=True)
-    finish_date = models.DateField(null=True, blank=True)
+    class Meta:
+        ordering = ('-id',)
+        db_table = 'type'
+
+    def __str__(self):
+        return self.name_ru
+
+
+class Type_news(models.Model):
+    name_ru = models.CharField(max_length=100, null=True, blank=True)
+    name_uz = models.CharField(max_length=100, null=True, blank=True)
+
+
+    class Meta:
+        ordering = ('-id',)
+        db_table = 'type_news'
+
+    def __str__(self):
+        return self.name_ru
+
+
+class Type_form(models.Model):
+    name_ru = models.CharField(max_length=100, null=True, blank=True)
+    name_uz = models.CharField(max_length=100, null=True, blank=True)
+
+
+    class Meta:
+        ordering = ('-id',)
+        db_table = 'type_form'
+
+    def __str__(self):
+        return self.name_ru
+
+
+class News(models.Model):
+    title_name_uz = models.CharField(max_length=255, null=True, blank=True)
+    title_name_ru = models.CharField(max_length=255, null=True, blank=True)
+    description_name_uz = models.TextField(null=True, blank=True)
+    description_name_ru = models.TextField(null=True, blank=True)
+    created = models.DateField(auto_now_add=True)
+    type = models.ForeignKey('Type_news', on_delete=models.CASCADE)
+
+
+class Forms(models.Model):
+    title_name_uz = models.CharField(max_length=255, null=True, blank=True)
+    title_name_ru = models.CharField(max_length=255, null=True, blank=True)
+    description_name_uz = models.TextField(null=True, blank=True)
+    description_name_ru = models.TextField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+    created = models.DateField(auto_now_add=True)
+    type = models.ForeignKey('Type_form', on_delete=models.CASCADE)
+
+
+class Criminal(models.Model):
+    description_name_uz = models.TextField(null=True, blank=True)
+    description_name_ru = models.TextField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+    created = models.DateField(auto_now_add=True)
 
 
 
