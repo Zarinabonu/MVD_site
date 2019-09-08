@@ -6,7 +6,7 @@ from app.model import Forms
 class ReformSerializer(ModelSerializer):
     class Meta:
         model = Forms
-        fields = ('title_name_ru', 'description_name_ru', 'image', 'type')
+        fields = ('title_name_ru', 'description_name_ru', 'image')
 
     def update(self, instance, validated_data):
 

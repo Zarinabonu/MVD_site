@@ -1,0 +1,214 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block css %}
+    <link href="{% static 'css/pages/tab-page.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Русский</span></a> </li>
+                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">English</span></a> </li>
+                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#messages" role="tab"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Узбекча</span></a> </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content tabcontent-border">
+                                <div class="tab-pane active" id="home" role="tabpanel">
+                                    <div class="p-20">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-3 text-right">
+                                                    <label for="title_ru" class="control-label">Загаловок (ru)</label>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <input type="text" id="title_ru" class="form-control" name="title_ru" placeholder="" autocomplete="off">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-3 text-right">
+                                                    <label for="content_ru" class="control-label">Полное содержание (ru)</label>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <textarea type="text" id="content_ru" class="moxiecut form-control" name="content_ru"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane  p-20" id="profile" role="tabpanel">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3 text-right">
+                                                <label for="title_en" class="control-label">Загаловок (en)</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="text" id="title_en" class="form-control" name="title_en" placeholder="" autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3 text-right">
+                                                <label for="content_en" class="control-label">Полное содержание (en)</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <textarea type="text" id="content_en" class="moxiecut form-control" name="content_en"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane p-20" id="messages" role="tabpanel">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3 text-right">
+                                                <label for="title_uz" class="control-label">Загаловок (uz)</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="text" id="title_uz" class="form-control" name="title_uz" placeholder="" autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3 text-right">
+                                                <label for="content_uz" class="control-label">Полное содержание (uz)</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <textarea type="text" id="content_uz" class="moxiecut form-control" name="content_uz"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-20">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-3 text-right">
+                                            <label for="category" class="control-label">Категория</label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <select name="category" id="category" class="form-control custom-select">
+                                                <option value="">Выберите</option>
+                                                
+                                                {% for category in categories %}
+                                                    <option value="{{category.id}}"> {{category}} </option>
+                                                {% endfor %}
+                                                    
+                                                
+                                                
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-3 text-right">
+                                            <label for="status" class="control-label">Статус</label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <select name="status" id="status" class="form-control custom-select">
+                                                <option value="1">Активный</option>
+                                                <option value="0"> Не активный </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="offset-sm-3 col-md-9">
+                                            <button id="createButton" type="submit" data-url="{% url 'faq-create-api'%}" class="btn btn-success"> <i class="fa fa-check"></i> Сохранить</button>
+                                            <button type="button" class="btn btn-inverse">Отмена</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End PAge Content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'assets/tinymce/js/tinymce/tinymce.min.js' %}"></script>
+    <script>
+        tinymce.init({
+            selector: "textarea.moxiecut",
+            theme: "modern",
+            width: '100%',
+            height: 300,
+            plugins: [
+            'advlist autolink lists link image charmap preview hr anchor pagebreak',
+            'searchreplace wordcount visualblocks visualchars code',
+            'insertdatetime nonbreaking table contextmenu directionality',
+            'emoticons template paste textcolor colorpicker textpattern imagetools codesample'
+            ],
+            toolbar: 'insertfile undo redo | bold italic sizeselect fontsizeselect | hr alignleft aligncenter alignjustify | bullist numlist | emoticons | code',
+            fontsize_formats: "8pt 10pt 12pt 14pt 18pt 24pt 36pt",
+            branding: false,
+            menubar: false
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#createButton").click(function (e) {
+                e.preventDefault();
+
+                var contentRu = tinymce.get('content_ru').getContent();
+                var contentEn = tinymce.get('content_en').getContent();
+                var contentUz = tinymce.get('content_uz').getContent();
+
+                let formData = new FormData();
+
+                formData.append('question_ru', $('input[name="title_ru"]').val());
+                formData.append('answer_ru', contentRu);
+                formData.append('question_en', $('input[name="title_en"]').val());
+                formData.append('answer_en', contentEn);
+                formData.append('question_uz', $('input[name="title_uz"]').val());
+                formData.append('answer_uz', contentUz);
+
+                formData.append('category', $('select[name="category"]').val());
+                formData.append('status', $('select[name="status"]').val());
+
+                var url = $("#createButton").data("url");
+                $.ajax({
+                    headers: { "X-CSRFToken": "{{csrf_token}}" },
+                    url: url,
+                    processData: false,
+                    contentType: false,
+                    method: 'POST',
+                    data: formData,
+                    success: function (data) {
+                        window.location.href = '/faq/category/list';
+                    },
+                    error: function (data) {
+                        alert('Error');
+                    }
+                });
+
+            })
+        });
+    </script>
+{% endblock %}

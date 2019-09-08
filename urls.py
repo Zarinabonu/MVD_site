@@ -21,7 +21,8 @@ from django.conf import settings
 from app import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('adminn/', admin.site.urls),
+    path('adminka/', include('admin.urls')),
     path('api/', include('app.api.urls')),
     path('', views.News_ListView.as_view(), name='main')
 

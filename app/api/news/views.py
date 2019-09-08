@@ -1,12 +1,12 @@
 from rest_framework.generics import CreateAPIView, UpdateAPIView, DestroyAPIView, ListAPIView
 
-from app.api.news.serializers import NewsSerialzier, NewsListSerialzier
+from app.api.news.serializers import NewsSerialzier, NewsListSerialzier, NewsCreateSerialzier
 from app.model import News
 
 
 class NewsCreateAPIView(CreateAPIView):
     queryset = News. objects.all()
-    serializer_class = NewsSerialzier
+    serializer_class = NewsCreateSerialzier
 
 
 class NewsUpdateAPIView(UpdateAPIView):

@@ -73,7 +73,7 @@ class News(models.Model):
     description_name_uz = models.TextField(null=True, blank=True)
     description_name_ru = models.TextField(null=True, blank=True)
     created = models.DateField(auto_now_add=True)
-    type = models.ForeignKey('Type_news', on_delete=models.CASCADE)
+    type = models.ForeignKey('Type_news', on_delete=models.CASCADE, null=True, blank=True)
 
 
 class Forms(models.Model):
