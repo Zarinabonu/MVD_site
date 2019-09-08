@@ -33,7 +33,7 @@
                                                     <label for="title_ru" class="control-label">Загаловок (ru)</label>
                                                 </div>
                                                 <div class="col-md-9">
-                                                    <input type="text" id="title_ru" class="form-control" value="{{forms.title_name_ru}}" name="title_name_ru" placeholder="" autocomplete="off">
+                                                    <input type="text" id="title_ru" class="form-control" value="{{reform.title_name_ru}}" name="title_name_ru" placeholder="" autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>
@@ -44,7 +44,7 @@
                                                     <label for="content_ru" class="control-label">Полное содержание (ru)</label>
                                                 </div>
                                                 <div class="col-md-9">
-                                                    <input type="text" id="content_ru" class="moxiecut form-control" name="description_name_ru">{{forms.description_name_ru}}</input>
+                                                    <input type="text" id="content_ru" class="moxiecut form-control" name="description_name_ru" value="{{reform.description_name_ru}}" />
                                                 </div>
                                             </div>
                                         </div>
@@ -60,26 +60,17 @@
                                                 <label for="title_uz" class="control-label">Загаловок (uz)</label>
                                             </div>
                                             <div class="col-md-9">
-                                                <input type="text" id="title_uz" class="form-control" name="title_name_uz" placeholder="" autocomplete="off" value="{{forms.title_name_uz}}">
+                                                <input type="text" id="title_uz" class="form-control" name="title_name_uz" placeholder="" autocomplete="off" value="{{reform.title_name_uz}}">
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-3 text-right">
-                                                <label for="content_uz" class="control-label">Полное содержание (uz)</label>
-                                            </div>
-                                            <div class="col-md-9">
-                                                <input type="text" id="content_uz" class="moxiecut form-control" name="description_name_uz">{{forms.description_name_uz}}</input>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="p-20">
                                 <select id="type2">
-                                            {% for t in types %}
+                                            {% for t in type %}
                                                 <option name="type">{{ t }}</option>
                                             {% endfor %}
                                          </select>                                
@@ -99,7 +90,7 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="offset-sm-3 col-md-9">
-                                            <button id="updateButton" type="submit" class="btn btn-success" data-url="{% url 'api-reform-update' forms.id %}"> <i class="fa fa-check"></i> Сохранить</button>
+                                            <button id="updateButton" type="submit" class="btn btn-success" data-url="{% url 'api-reform-update' reform.id %}"> <i class="fa fa-check"></i> Сохранить</button>
                                             <button type="button" class="btn btn-inverse">Отмена</button>
                                         </div>
                                     </div>
@@ -174,7 +165,7 @@
         $(document).ready(function () {
             $("#updateButton").click(function (e) {
                 e.preventDefault();
-
+                let formData = new FormData();
                 formData.append('title_name_ru', $('input[name="title_name_ru"]').val());
                 formData.append('description_name_ru', $('input[name="description_name_ru"]').val());
                 for (let i = 0; i < $('#kv-explorer')[0].files.length; i++){

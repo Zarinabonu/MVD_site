@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views import View
-from django.views.generic import TemplateView, ListView, DetailView
-from app.model import News, Type_news, Forms, Type_form
+from django.views.generic import TemplateView, ListView, DetailView, CreateView
+from app.model import News, Type_news, Forms, Type_form, Criminal
+
 
 class Admin(View):
 	def get(self, request):
@@ -33,21 +34,56 @@ class News_UpdateView(DetailView):
 
 
 class Reform_ListView(ListView):
-
     def get(self, request, *args, **kwargs):
         reform = Forms.objects.all()[:4]
         type = Type_form.objects.all()
         return render(request, 'admin/reform/list.html', {'reforms': reform,
-        	'types':types})
+        	'types':type})
+
 
 class Reform_UpdateView(DetailView):
-	form = Forms.objects.all()
+
+	model = Forms
+	context_object_name = 'reform'
+	template_name = 'admin/reform/update.html'
 	pk_url_kwarg = 'id'
 
-	def get(self, request, *args, **kwargs):
-		type = Type_form.objects.all()
-		return render(request, 'admin/reform/update.html', {'types':type,
-			'forms': form})
+	def get_context_data(self, **kwargs):
+		context = super(Reform_UpdateView, self).get_context_data(**kwargs)
+		context['type'] = Type_form.objects.all()
+		return context
+
+
+class Reform_CreateView(TemplateView):
+	template_name = 'admin/reform/create.html'
+
+	def get_context_data(self, **kwargs):
+		context = super(Reform_CreateView, self).get_context_data(**kwargs)
+		context['type'] = Type_form.objects.all()
+		return context
+
+
+class Criminal_ListView(ListView):
+	model = Criminal
+	context_object_name = 'criminal'
+	template_name = 'admin/criminal/list.html'
+	queryset = Criminal.objects.all()
+
+
+class Criminal_UpdateView(DetailView):
+	model = Criminal
+	context_object_name = 'criminal'
+	template_name = 'admin/criminal/update.html'
+	pk_url_kwarg = 'id'
+
+
+class Criminal_CreateView(TemplateView):
+	template_name = 'admin/criminal/create.html'
+
+
+
+
+
 
 
 

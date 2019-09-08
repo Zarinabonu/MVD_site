@@ -18,6 +18,13 @@ class ReformSerializer(ModelSerializer):
         return instance
 
 
+class ReformCreateSerializer(ModelSerializer):
+    class Meta:
+        model = Forms
+        fields = ('title_name_ru', 'description_name_ru', 'image', 'type')
+
+
+
 class ReformListSerializer(ModelSerializer):
     class Meta:
         model = Forms

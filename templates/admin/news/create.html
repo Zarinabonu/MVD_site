@@ -82,9 +82,9 @@
                                         <div class="col-md-3 text-right">
                                             <label for="file" class="control-label">Тип</label>
                                         </div>
-                                        <select id="type2">
+                                        <select id="type2" name="type">
                                             {% for t in type %}
-                                                <option name="type">{{ t }}</option>
+                                                <option name="type" value="{{ t.id }}">{{ t }}</option>
                                             {% endfor %}
                                          </select>
                                     </div>
@@ -168,16 +168,11 @@
             $("#createButton").click(function (e) {
                 e.preventDefault();
 
-
                 let formData = new FormData();
-
                 formData.append('title_name_ru', $('input[name="title_name_ru"]').val());
                 formData.append('description_name_ru', $('input[name="description_name_ru"]').val());
+                formData.append('type', $('select[name="type"]').val());
 
-                formData.append('type', $("#type2").find(":selected").text());
-
-
-               
                 var url = $("#createButton").data("url");
                 $.ajax({
                     headers: { "X-CSRFToken": "{{csrf_token}}" },
@@ -187,7 +182,7 @@
                     method: 'POST',
                     data: formData,
                     success: function (data) {
-                        // window.location.href = '/about/list';
+                         window.location.href = '/adminka/news/list';
                     },
                     error: function (data) {
                         alert('Error');

@@ -18,10 +18,14 @@ class CriminalUpdateAPIView(UpdateAPIView):
 
 class CriminalDeleteAPIView(DestroyAPIView):
     queryset = Criminal. objects.all()
-    serializer_class = CriminalSerializer
     lookup_url_kwarg = 'id'
+
+    def delete(self, request, *args, **kwargs):
+        print(self.kwargs['id'])
+        print(Criminal.objects.get(id=self.kwargs['id']))
+        return self.destroy(request, *args, **kwargs)
 
 
 class CriminalListAPIView(ListAPIView):
-    queryset = Criminal. objects.all()
+    queryset = Criminal.objects.all()
     serializer_class = CriminalListSerializer

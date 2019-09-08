@@ -1,13 +1,13 @@
 from rest_framework.generics import CreateAPIView, UpdateAPIView, DestroyAPIView, ListAPIView
 from app.model import Forms
 
-from app.api.reforms.serializers import ReformSerializer, ReformListSerializer
+from app.api.reforms.serializers import ReformSerializer, ReformListSerializer, ReformCreateSerializer
 from app.model import News
 
 
 class ReformNewsCreateAPIView(CreateAPIView):
     queryset = Forms. objects.all()
-    serializer_class = ReformSerializer
+    serializer_class = ReformCreateSerializer
 
 
 class ReformUpdateAPIView(UpdateAPIView):

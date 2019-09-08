@@ -1,4 +1,4 @@
-{% extends '_base.html' %}
+{% extends 'admin/_base.html' %}
 {% load static %}
 
 {% block css %}
@@ -33,7 +33,7 @@
                                                     <label for="title_ru" class="control-label">Загаловок (ru)</label>
                                                 </div>
                                                 <div class="col-md-9">
-                                                    <input type="text" id="title_ru" class="form-control" name="title_ru" placeholder="" autocomplete="off">
+                                                    <input type="text" id="title_ru" class="form-control" name="title_name_ru" placeholder="" autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>
@@ -44,35 +44,13 @@
                                                     <label for="content_ru" class="control-label">Полное содержание (ru)</label>
                                                 </div>
                                                 <div class="col-md-9">
-                                                    <textarea type="text" id="content_ru" class="moxiecut form-control" name="content_ru"></textarea>
+                                                    <input type="text" id="content_ru" class="form-control" name="description_name_ru" placeholder="" autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane  p-20" id="profile" role="tabpanel">
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-3 text-right">
-                                                <label for="title_en" class="control-label">Загаловок (en)</label>
-                                            </div>
-                                            <div class="col-md-9">
-                                                <input type="text" id="title_en" class="form-control" name="title_en" placeholder="" autocomplete="off">
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-3 text-right">
-                                                <label for="content_en" class="control-label">Полное содержание (en)</label>
-                                            </div>
-                                            <div class="col-md-9">
-                                                <textarea type="text" id="content_en" class="moxiecut form-control" name="content_en"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="tab-pane p-20" id="messages" role="tabpanel">
                                     <div class="form-group">
                                         <div class="row">
@@ -80,7 +58,7 @@
                                                 <label for="title_uz" class="control-label">Загаловок (uz)</label>
                                             </div>
                                             <div class="col-md-9">
-                                                <input type="text" id="title_uz" class="form-control" name="title_uz" placeholder="" autocomplete="off">
+                                                <input type="text" id="title_uz" class="form-control" name="title_name_uz" placeholder="" autocomplete="off">
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +69,7 @@
                                                 <label for="content_uz" class="control-label">Полное содержание (uz)</label>
                                             </div>
                                             <div class="col-md-9">
-                                                <textarea type="text" id="content_uz" class="moxiecut form-control" name="content_uz"></textarea>
+                                                <input type="text" id="content_uz" class="form-control" name="description_name_uz" placeholder="" autocomplete="off">
                                             </div>
                                         </div>
                                     </div>
@@ -99,18 +77,20 @@
                             </div>
                             <div class="p-20">
                                 <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-md-3 text-right">
-                                            <label for="status" class="control-label">Статус</label>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <select name="status" id="status" class="form-control custom-select">
-                                                <option value="1">Активный</option>
-                                                <option value="0"> Не активный </option>
-                                            </select>
+                                        <div class="row">
+                                            <div class="col-md-3 text-right">
+                                                <label for="content_uz" class="control-label">Тип</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                 <select id="type2" name="type">
+                                                    {% for t in type %}
+                                                        <option value="{{ t.id }}" name="type">{{ t }}</option>
+                                                    {% endfor %}
+                                                 </select>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-md-3 text-right">
@@ -126,7 +106,7 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="offset-sm-3 col-md-9">
-                                            <button id="createButton" type="submit" data-url="{% url 'partner-create-api'%}" class="btn btn-success"> <i class="fa fa-check"></i> Сохранить</button>
+                                            <button id="createButton" type="submit" data-url="{% url 'api-reform-create'%}" class="btn btn-success"> <i class="fa fa-check"></i> Сохранить</button>
                                             <button type="button" class="btn btn-inverse">Отмена</button>
                                         </div>
                                     </div>
@@ -202,24 +182,14 @@
             $("#createButton").click(function (e) {
                 e.preventDefault();
 
-                var contentRu = tinymce.get('content_ru').getContent();
-                var contentEn = tinymce.get('content_en').getContent();
-                var contentUz = tinymce.get('content_uz').getContent();
-
                 let formData = new FormData();
-
-                formData.append('title_ru', $('input[name="title_ru"]').val());
-                formData.append('content_ru', contentRu);
-                formData.append('title_en', $('input[name="title_en"]').val());
-                formData.append('content_en', contentEn);
-                formData.append('title_uz', $('input[name="title_uz"]').val());
-                formData.append('content_uz', contentUz);
-
-                formData.append('status', $('select[name="status"]').val());
-
+                formData.append('title_name_ru', $('input[name="title_name_ru"]').val());
+                formData.append('description_name_ru', $('input[name="description_name_ru"]').val());
+                formData.append('type', $('select[name="type"]').val());
                 for (let i = 0; i < $('#kv-explorer')[0].files.length; i++){
                     formData.append('image', $('#kv-explorer')[0].files[i]);
                 }
+
                 var url = $("#createButton").data("url");
                 $.ajax({
                     headers: { "X-CSRFToken": "{{csrf_token}}" },
@@ -229,7 +199,7 @@
                     method: 'POST',
                     data: formData,
                     success: function (data) {
-                        window.location.href = '/partner/list';
+                        window.location.href = '/adminka/reform';
                     },
                     error: function (data) {
                         alert('Error');
