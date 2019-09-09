@@ -112,8 +112,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en'
 
-
-
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
@@ -121,17 +119,22 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+#
+# LANGUAGES = (
+#     ('ru', _('Russian')),
+#     ('en', _('English')),
+#     ('uz', _('Uzbek')),
+# )
+# LOCALE_PATHS = (
+#     os.path.join(BASE_DIR, 'conf/locale'),
+# )
+
+# LOCALE_PATHS = (
+#     os.path.join(PROJECT_PATH, '../locale'),
+# )
 
 
-LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'locale'),
-)
-
-LANGUAGES = (
-    ('ru', _('Russian')),
-    ('uz', _('Uzbek')),
-)
-
+# LANGUAGE_CODE = 'uz' 'ru'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
@@ -144,4 +147,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 

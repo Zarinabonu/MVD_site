@@ -1,4 +1,5 @@
 from django.db import models
+from .criminal_static import Criminal_type
 
 
 class Menu(models.Model):
@@ -91,6 +92,7 @@ class Criminal(models.Model):
     description_name_ru = models.TextField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     created = models.DateField(auto_now_add=True)
+    type = models.ForeignKey('Criminal_type', on_delete=models.CASCADE)
 
 
 

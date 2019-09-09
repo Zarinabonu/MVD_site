@@ -19,8 +19,8 @@
 			      <img src="{% static 'image/home/slide1.jpg' %}" class="d-block w-100" alt="...">
 			      <div class="banner-praz"></div>
 			      <div class="banner-text">
-			      	<h4>Подведены итоги совершенствования деятельности служб миграции и оформления гражданства</h4>
-			      	<a href="#!">
+			      	<h4>{% trans "Подведены итоги совершенствования деятельности служб миграции и оформления гражданства" %}</h4>
+			      	<a href="#">
 			      		<button class="button-slide">{% trans "Подробнее" %}</button>
 			      	</a>
 			      </div>
@@ -29,7 +29,7 @@
 			      <img src="{% static 'image/home/slide6.jpg' %}" class="d-block w-100" alt="...">
 			      <div class="banner-praz"></div>
 			      <div class="banner-text">
-			      	<h4>Подведены итоги совершенствования служб миграции и оформления гражданства</h4>
+			      	<h4>{% trans "Подведены итоги совершенствования служб миграции и оформления гражданства" %}</h4>
 			      	<a href="#!">
 			      		<button class="button-slide">{% trans "Подробнее" %}</button>
 			      	</a>
@@ -39,20 +39,20 @@
 			      <img src="{% static 'image/home/slide8.jpg' %}" class="d-block w-100" alt="...">
 			      <div class="banner-praz"></div>
 			      <div class="banner-text">
-			      	<h4>Подведены совершенствования деятельности служб миграции и оформления гражданства</h4>
+			      	<h4>{% trans "Подведены совершенствования деятельности служб миграции и оформления гражданства" %}</h4>
 			      	<a href="#!">
-			      		<button class="button-slide">Подробнее</button>
+			      		<button class="button-slide">{% trans "Подробнее" %}</button>
 			      	</a>
 			      </div>
 			    </div>
 			  </div>
 			  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
 			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			    <span class="sr-only">Previous</span>
+			    <span class="sr-only">{% trans "Previous" %}</span>
 			  </a>
 			  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
 			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			    <span class="sr-only">Next</span>
+			    <span class="sr-only">{% trans "Next" %}</span>
 			  </a>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 					</a>
 					<a class="link-phone" href="#">
 						<i class="fa fa-phone" aria-hidden="true"></i>
-						По происшествиям 102
+						{% trans "По происшествиям 102" %}
 					</a>
 				</div>
 			</div>
@@ -82,7 +82,7 @@
 				</div>
 				<div class="ban-center-bottom">
 					<h3>
-						МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН
+						{% trans "МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН" %}
 					</h3>
 				</div>
 			</div>
@@ -123,7 +123,7 @@
 	<section class="news">
 		<div class="heading">
 			<div class="heading-hr"></div>
-			<h4>Новости Министерства Внутренних Дел</h4>
+			<h4>{% trans "Новости Министерства Внутренних Дел" %}</h4>
 			<div class="heading-hr"></div>
 		</div>
 		<div class="container con-pad">
@@ -135,12 +135,12 @@
 						<div class="news-item">
 							<button class="button-yellow">{{ new.created }}</button>
 							<p>{{ new.title_name_ru }}</p>
-							<a class="readmore" href="#">Подробнее</a>
+							<a class="readmore" href="#">{% trans "Подробнее" %}</a>
 						</div>
 						<div class="news-item">
 							<button class="button-yellow">{{ new.created }}</button>
 							<p>{{ new.title_name_ru }}</p>
-							<a class="readmore" href="#">Подробнее</a>
+							<a class="readmore" href="#">{% trans "Подробнее" %}</a>
 						</div>
 						
 					</div>
@@ -152,7 +152,7 @@
 	<section class="uslugi">
 		<div class="heading">
 			<div class="heading-hr"></div>
-			<h4>Интерактивные услуги</h4>
+			<h4>{% trans "Интерактивные услуги" %}</h4>
 			<div class="heading-hr"></div>
 		</div>
 		<div class="uslugi-back">
@@ -165,7 +165,7 @@
 			    		<div class="us-icon-div">
 			    			<img src="{% static 'image/home/uslugi1.png' %}">
 			    		</div>
-			    		<p>Запись на приём к<br> руководству</p>
+			    		<p>{% trans "Запись на приём к" %}<br> {% trans "руководству" %}</p>
 			    	</aside>
 			    </div>
 			    <div class="item">
@@ -173,7 +173,7 @@
 			    		<div class="us-icon-div">
 			    			<img src="{% static 'image/home/uslugi2.png' %}">
 			    		</div>
-			    		<p>Дни приёма руководства</p>
+			    		<p>{% trans "Дни приёма руководства" %}</p>
 			    	</aside>
 			    </div>
 			    <div class="item">
@@ -181,7 +181,7 @@
 			    		<div class="us-icon-div">
 			    			<img src="{% static 'image/home/uslugi3.png' %}">
 			    		</div>
-			    		<p>Калькулятор штрафов</p>
+			    		<p>{% trans "Калькулятор штрафов" %}</p>
 			    	</aside>
 			    </div>
 			    <div class="item">
@@ -190,7 +190,7 @@
 			    			<img src="{% static 'image/home/uslugi4.png' %}">
 
 			    		</div>
-			    		<p>Просмотр штрафов ПДД</p>
+			    		<p>{% trans "Просмотр штрафов ПДД" %}</p>
 			    	</aside>
 			    </div>
 			    <div class="item">
@@ -198,7 +198,7 @@
 			    		<div class="us-icon-div">
 			    			<img src="{% static 'image/home/uslugi5.png' %}">
 			    		</div>
-			    		<p>Онлайн аукцион<br> автономеров</p>
+			    		<p>{% trans "Онлайн аукцион <br> автономеров" %}</p>
 			    	</aside>
 			    </div>
 			    <div class="item">
@@ -206,7 +206,7 @@
 			    		<div class="us-icon-div">
 			    			<img src="{% static 'image/home/uslugi1.png' %}">
 			    		</div>
-			    		<p>Запись на приём к<br> руководству</p>
+			    		<p>{% trans "Запись на приём к" %}<br> {% trans "руководству" %}</p>
 			    	</aside>
 			    </div>
 			    <div class="item">
@@ -214,7 +214,7 @@
 			    		<div class="us-icon-div">
 			    			<img src="{% static 'image/home/uslugi2.png' %}">
 			    		</div>
-			    		<p>Дни приёма руководства</p>
+			    		<p>{% trans "Дни приёма руководства" %}</p>
 			    	</aside>
 			    </div>
 			    <div class="item">
@@ -222,7 +222,7 @@
 			    		<div class="us-icon-div">
 			    			<img src="{% static 'image/home/uslugi3.png' %}">
 			    		</div>
-			    		<p>Калькулятор штрафов</p>
+			    		<p>{% trans "Калькулятор штрафов" %}</p>
 			    	</aside>
 			    </div>
 			    <div class="item">
@@ -230,7 +230,7 @@
 			    		<div class="us-icon-div">
 			    			<img src="{% static 'image/home/uslugi4.png' %}">
 			    		</div>
-			    		<p>Просмотр штрафов ПДД</p>
+			    		<p>{% trans "Просмотр штрафов ПДД" %}</p>
 			    	</aside>
 			    </div>
 			    <div class="item">
@@ -238,7 +238,7 @@
 			    		<div class="us-icon-div">
 			    			<img src="{% static 'image/home/uslugi5.png' %}">
 			    		</div>
-			    		<p>Онлайн аукцион<br> автономеров</p>
+			    		<p>{% trans "Онлайн аукцион" %}<br> {% trans "автономеров" %}</p>
 			    	</aside>
 			    </div>
 			</div>
@@ -247,13 +247,13 @@
 	<section class="reform">
 		<div class="heading">
 			<div class="heading-hr"></div>
-			<h4>Реформы</h4>
+			<h4>{% trans "Реформы" %}</h4>
 			<div class="heading-hr"></div>
 		</div>
 		<div class="container con-pad">
 			<div class="row">
 				<div class="col-lg-6">
-					<h5 class="reform-h5">Реформы по Республике Узбекистан</h5>
+					<h5 class="reform-h5">{% trans "Реформы по Республике Узбекистан" %}</h5>
 					{% for reform in reforms %}
 					<div class="reform-item">
 						<div class="inner">
@@ -271,7 +271,7 @@
                     {% endfor %}
 				</div>
 				<div class="col-lg-6">
-					<h5 class="reform-h5">Реформы Министерства Внутренних Дел</h5>
+					<h5 class="reform-h5">{% trans "Реформы Министерства Внутренних Дел" %}</h5>
 					{% for reform in reforms %}
 					<div class="reform-item">
 						<div class="inner">
@@ -294,7 +294,7 @@
 	<section class="karera">
 		<div class="heading">
 			<div class="heading-hr"></div>
-			<h4>Карьера</h4>
+			<h4>{% trans "Карьера" %}</h4>
 			<div class="heading-hr"></div>
 		</div>
 		<div class="container con-pad">
@@ -302,28 +302,28 @@
 				<div class="col-lg-3 col-sm-6">
 					<aside class="karera-in">
 						<div class="karera-back one">
-							<p>Вакансии</p>
+							<p>{% trans "Вакансии" %}</p>
 						</div>
 					</aside>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<aside class="karera-in">
 						<div class="karera-back two">
-							<p>Этапы подачи документов</p>
+							<p>{% trans "Этапы подачи документов" %}</p>
 						</div>
 					</aside>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<aside class="karera-in">
 						<div class="karera-back tree">
-							<p>Этапы подачи на учебу</p>
+							<p>{% trans "Этапы подачи на учебу" %}</p>
 						</div>
 					</aside>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<aside class="karera-in">
 						<div class="karera-back four">
-							<p>Вопросы и ответы</p>
+							<p>{% trans "Вопросы и ответы" %}</p>
 						</div>
 					</aside>
 				</div>
@@ -333,7 +333,7 @@
 	<section class="prois">
 		<div class="heading">
 			<div class="heading-hr"></div>
-			<h4>Происшествия в республике</h4>
+			<h4>{% trans "Происшествия в республике" %}</h4>
 			<div class="heading-hr"></div>
 		</div>
 		<div class="container con-pad">
@@ -359,7 +359,7 @@
 	<section class="peres">
 		<div class="heading">
 			<div class="heading-hr"></div>
-			<h4>Состояние преступности</h4>
+			<h4>{% trans "Состояние преступности" %}</h4>
 			<div class="heading-hr"></div>
 		</div>
 		<div class="container con-pad">
@@ -367,59 +367,59 @@
 				<div class="col-lg-4 peres-left">
 					<ul class="peres-ul">
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Город Ташкент</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Город Ташкент" %}</span>
 							<span>19</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Ташкентская область</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Ташкентская область" %}</span>
 							<span>8</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Самаркандская область</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Самаркандская область" %}</span>
 							<span>6</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Сырдарьинская область</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Сырдарьинская область" %}</span>
 							<span>3</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Джизакская область</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Джизакская область" %}</span>
 							<span>1</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Бухарская область</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Бухарская область" %}</span>
 							<span>4</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Навоийская область</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Навоийская область" %}</span>
 							<span>3</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Ферганская область</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Ферганская область" %}</span>
 							<span>6</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Андижанская область</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Андижанская область" %}</span>
 							<span>2</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Наманганская область</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Наманганская область" %}</span>
 							<span>1</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Сурхандарьинская область</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Сурхандарьинская область" %}</span>
 							<span>4</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Кашкадарьинская область</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Кашкадарьинская область" %}</span>
 							<span>5</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Хорезмская область</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Хорезмская область" %}</span>
 							<span>2</span>
 						</li>
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Республика Каракалпакстан</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i>{% trans " Республика Каракалпакстан" %}</span>
 							<span>4</span>
 						</li>
 						
@@ -442,7 +442,7 @@
 							</div>
 							<div>
 								<h1>1</h1>
-								<p>Тяжелые травмы</p>
+								<p>{% trans "Тяжелые травмы" %}</p>
 							</div>
 						</div>
 						<div class="peres-flex-in">
@@ -517,7 +517,7 @@
 	<section class="map">
 		<div class="heading">
 			<div class="heading-hr"></div>
-			<h4>Территориальные органы внутренних дел</h4>
+			<h4>{%  trans "Территориальные органы внутренних дел" %}</h4>
 			<div class="heading-hr"></div>
 		</div>
 		<div class="container con-pad">
@@ -621,15 +621,15 @@
 							<p class="viloyat-p"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> <span id="title-top">Джизакская область</span></p>
 						</div>
 						<div class="vil-div-bottom">
-							<h5 id="title-bottom">Джизакская область</h5>
+							<h5 id="title-bottom">{%  trans "Джизакская область" %}</h5>
 							<div class="vdb-inner">
 								<div class="one">
 									<img src="{% static 'image/home/map.png' %}">
-									<span class="ml-2">Руководство</span>
+									<span class="ml-2">{%  trans "Руководство" %}</span>
 								</div>
 								<div>
 									<img src="{% static 'image/home/phone.png' %}">
-									<span class="ml-2">Контактная информация</span>
+									<span class="ml-2">{%  trans "Контактная информация" %}</span>
 								</div>	
 							</div>
 						</div>
@@ -641,37 +641,37 @@
 							<img src="{% static 'image/home/xar-right.jpg' %}">
 							<div class="xar-img-before">
 								<h2>2019</h2>
-								<p>Год активных инвестиций и социального развития</p>
+								<p>{%  trans "Год активных инвестиций и социального развития" %}</p>
 							</div>
 						</figure>
-						<h3>Опрос</h3>
+						<h3>{%  trans "Опрос" %}</h3>
 						<div class="xar-card">
-							<h5>Какая категория новостей Вам интересна больше остальных?</h5>
+							<h5>{%  trans "Какая категория новостей Вам интересна больше остальных?" %}</h5>
 							<div class="xar-example">
 							  <label class="radio-button">
 							    <input type="radio" class="radio-button__input" id="choice1-1" name="choice1">
 							    <span class="radio-button__control"></span>
-							    <span class="radio-button__label">Новости МВД</span>
+							    <span class="radio-button__label">{%  trans "Новости МВД" %}</span>
 							  </label>
 							  <label class="radio-button">
 							    <input type="radio" class="radio-button__input" id="choice1-2" name="choice1">
 							    <span class="radio-button__control"></span>
-							    <span class="radio-button__label">Внимание розыск!</span>
+							    <span class="radio-button__label">{%  trans "Внимание розыск!" %}</span>
 							  </label>
 							  <label class="radio-button">
 							    <input type="radio" class="radio-button__input" id="choice1-2" name="choice1">
 							    <span class="radio-button__control"></span>
-							    <span class="radio-button__label">Происшествия</span>
+							    <span class="radio-button__label">{%  trans "Происшествия" %}</span>
 							  </label>
 							  <label class="radio-button">
 							    <input type="radio" class="radio-button__input" id="choice1-2" name="choice1">
 							    <span class="radio-button__control"></span>
-							    <span class="radio-button__label">Вакансии</span>
+							    <span class="radio-button__label">{%  trans "Вакансии" %}</span>
 							  </label>
 							</div>
 							<div>
-								<button class="button-yellow">Голосовать</button>
-								<button class="button-yellow xar-btn">Результаты</button>
+								<button class="button-yellow">{%  trans "Голосовать" %}</button>
+								<button class="button-yellow xar-btn">{%  trans "Результаты" %}</button>
 							</div>
 						</div>
 					</div>
@@ -682,7 +682,7 @@
 	<section class="polez">
 		<div class="heading">
 			<div class="heading-hr"></div>
-			<h4>Полезные ссылки</h4>
+			<h4>{%  trans "Полезные ссылки" %}</h4>
 			<div class="heading-hr"></div>
 		</div>
 		<div class="container con-pad">
@@ -693,7 +693,7 @@
 			    			<img src="{% static 'image/home/link1.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			Официальный веб-сайт <br> Президента Республики <br>Узбекистан
+			    			{%  trans "Официальный веб-сайт" %} <br> {%  trans "Президента Республики " %}<br>{%  trans "Узбекистан" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -703,7 +703,7 @@
 			    			<img src="{% static 'image/home/link2.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			Правительственный портал <br>Республики Узбекистан
+			    			{%  trans "Правительственный портал br> Республики Узбекистан" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -713,7 +713,7 @@
 			    			<img src="{% static 'image/home/link3.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			Портал открытых данных<br> Республики Узбекистан
+			    			{%  trans "Портал открытых данных<br> Республики Узбекистан" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -723,7 +723,7 @@
 			    			<img src="{% static 'image/home/link4.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			Институт пожарной<br> безопасности МВД
+			    			{%  trans "Институт пожарной<br> безопасности МВД" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -732,8 +732,8 @@
 			    		<a class="polez-link-top" href="#!">
 			    			<img src="{% static 'image/home/link5.png' %}">
 			    		</a>
-			    		<a class="polez-link-bottom" href="#!">
-			    			Академия МВД
+			    		<a class="polez-link-bottom" href="#">
+			    			{%  trans "Академия МВД" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -743,7 +743,7 @@
 			    			<img src="{% static 'image/home/link1.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			Официальный веб-сайт <br> Президента Республики <br>Узбекистан
+			    			{%  trans "Официальный веб-сайт " %}<br> {%  trans "Президента Республики <br> Узбекистан" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -753,7 +753,7 @@
 			    			<img src="{% static 'image/home/link2.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			Правительственный портал <br>Республики Узбекистан
+			    			{%  trans "Правительственный портал <br> Республики Узбекистан" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -763,7 +763,7 @@
 			    			<img src="{% static 'image/home/link3.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			Портал открытых данных<br> Республики Узбекистан
+			    			{%  trans "Портал открытых данных <br> Республики Узбекистан" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -773,7 +773,7 @@
 			    			<img src="{% static 'image/home/link4.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			Институт пожарной<br> безопасности МВД
+			    			{%  trans "Институт пожарной<br> безопасности МВД" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -783,7 +783,7 @@
 			    			<img src="{% static 'image/home/link5.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			Академия МВД
+			    			{%  trans "Академия МВД" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -797,17 +797,17 @@
 			<div class="row">
 				<div class="col-lg-9 foo-one-col">
 					<div class="menu-foo">	
-						<a href="#!">О министерстве</a>
-						<a href="#!">Пресс-центр</a>
-						<a href="#!">Госуслуги</a>
-						<a href="#!">Обрашения</a>
-						<a href="#!">Реестр НПА</a>
-						<a href="#!">Интерактивные услуги</a>
-						<a href="#!">Контакты</a>
+						<a href="#!">{%  trans "О министерстве" %}</a>
+						<a href="#!">{%  trans "Пресс-центр" %}</a>
+						<a href="#!">{%  trans "Госуслуги" %}</a>
+						<a href="#!">{%  trans "Обрашения" %}</a>
+						<a href="#!">{%  trans "Реестр НПА" %}</a>
+						<a href="#!">{%  trans "Интерактивные услуги" %}</a>
+						<a href="#!">{%  trans "Контакты" %}</a>
 					</div>
 				</div>
 				<div class="col-lg-3">
-					<span class="foo-top-span">Мы в соц.сетях:</span>
+					<span class="foo-top-span">{%  trans "Мы в соц.сетях:" %}</span>
 					<a class="foo-top-icon" href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 					<a class="foo-top-icon" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 					<a class="foo-top-icon" href="#!"><i class="fa fa-telegram" aria-hidden="true"></i></a>
@@ -824,26 +824,26 @@
 							<img src="{% static 'image/home/footer.png' %}">
 						</a>
 						<a href="#!">
-							<span>МИНИСТЕРСТВО ВНУТРЕННИХ<br> ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН</span>
+							<span>{%  trans "МИНИСТЕРСТВО ВНУТРЕННИХ <br> ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН" %}</span>
 						</a>
 					</aside>
 				</div>
 				<div class="col-lg-2 col-md-6 foo-two-col">
 					<img src="{% static 'image/home/foo-phone.png' %}">
 					<div>
-						<p>По происшествиям</p>
+						<p>{%  trans "По происшествиям" %}</p>
 						<h6>102</h6>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 foo-two-col">
 					<img src="{% static 'image/home/foo-phone.png' %}">
 					<div>
-						<p>Телефон доверия</p>
+						<p>{%  trans "Телефон доверия" %}</p>
 						<h6>1102</h6>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-12 footer-ctrl">
-					<p>Внимание! Если Вы нашли ошибку в тексте, выделите ее и нажмите<br> Ctrl + Enter для уведомлениия администрации </p>
+					<p>{%  trans "Внимание! Если Вы нашли ошибку в тексте, выделите ее и нажмите" %}<br> Ctrl + Enter {%  trans "для уведомлениия администрации " %}</p>
 				</div>
 			</div>
 		</div>
@@ -852,13 +852,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 foo-three-col">
-					<span>&copy; 2006-2019. Все права защищены</span>
+					<span>&copy; 2006-2019. {%  trans "Все права защищены" %}</span>
 				</div>
 				<div class="col-lg-5 foo-three-col">
-					<span>При использовании материалов ссылка на<a href="#!"> www.mvd.uz </a>обязательна</span>
+					<span>{%  trans "При использовании материалов ссылка на" %}<a href="#!"> www.mvd.uz </a>{%  trans "обязательна" %}</span>
 				</div>
 				<div class="col-lg-3 foo-three-col">
-					<span>Разработка сайта: <a href="#!">Online Service Group</a></span>
+					<span>{%  trans "Разработка сайта:" %} <a href="#!">Online Service Group</a></span>
 				</div>
 			</div>
 		</div>
@@ -876,19 +876,19 @@
 	<section class="section-hide">
 		<div class="ctrl-enter">
 			<form>
-			  <p>Muallifga xatolar bo'yicha xabar berish:</p>
+			  <p>{%  trans "Muallifga xatolar bo'yicha xabar berish:" %}</p>
 			  <hr>
 			  <div class="form-group">
-			    <label for="formGroupExampleInput">Matn xato bilan:</label>
+			    <label for="formGroupExampleInput">{%  trans "Matn xato bilan:" %}</label>
 			    <textarea id="text-area-xato" class="form-control" rows="4" cols="36"></textarea>
 			  </div>
 			  <div class="form-group">
-			    <label for="formGroupExampleInput2">Sizning izoxingiz yoki to`g`ri versiya:</label>
+			    <label for="formGroupExampleInput2">{%  trans "Sizning izoxingiz yoki to`g`ri versiya:" %}</label>
 			    <textarea id="text-area-right" class="form-control" rows="4" cols="36"></textarea>
 			  </div>
 			  <div class="ctrl-btn">
-			  	<button class="btn-bekor" type="button">Bekor qilish</button>
-			  	<button type="submit">Jo'natish</button>
+			  	<button class="btn-bekor" type="button">{%  trans "Bekor qilish" %}</button>
+			  	<button type="submit">{%  trans "Jo'natish" %}</button>
 			  </div>
 			</form>
 		</div>
