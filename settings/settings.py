@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'app',
+    'cms',
     'rest_framework',
 ]
 
@@ -120,14 +121,14 @@ USE_L10N = True
 
 USE_TZ = True
 #
-# LANGUAGES = (
-#     ('ru', _('Russian')),
-#     ('en', _('English')),
-#     ('uz', _('Uzbek')),
-# )
-# LOCALE_PATHS = (
-#     os.path.join(BASE_DIR, 'conf/locale'),
-# )
+LANGUAGES = (
+    ('ru', _('Russian')),
+    ('en', _('English')),
+    ('uz', _('Uzbek')),
+)
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'conf'),
+)
 
 # LOCALE_PATHS = (
 #     os.path.join(PROJECT_PATH, '../locale'),

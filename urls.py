@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
+
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
@@ -22,10 +23,11 @@ from django.conf import settings
 from app import views
 
 urlpatterns = [
-    path('adminka/', include('admin.urls')),
-    path('admin/', admin.site.urls),
+    path('', views.News_ListView.as_view(), name='main'),
+    path('cms/', include('cms.urls')),
     path('api/', include('app.api.urls')),
-    path('', views.News_ListView.as_view(), name='main')
+    path('admin/', admin.site.urls),
+    path('news', views.News_Detail_ListView.as_view(), name='news'),
 
 ]
 

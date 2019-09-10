@@ -28,4 +28,4 @@ class Criminal_type(models.Model):
 class Static_criminal(models.Model):
     region = models.ManyToManyField('Region')
     criminal_type = models.ForeignKey('Criminal_type', null=True, blank=True, on_delete=models.DO_NOTHING)
-    count = models.IntegerField(null=True, blank=True)
+    counter = models.IntegerField(null=True, blank=True)

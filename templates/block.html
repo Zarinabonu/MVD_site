@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
+
 {#{% load extra_functions %}#}
 <html>
     <title>Home</title>
@@ -87,57 +89,7 @@
 			<li class="mob-li"><a href="#">Контакты</a></li>
 		</ul>
 	</section>
-	<main class="menu">
-		<div class="mfa-link">
-			<div class="m-left">
-				<a href="#!">
-					<i class="fa fa-phone" aria-hidden="true"></i>
-					По происшествиям 102
-				</a>
-			</div>
-			<div class="m-center">
-				<a href="#!">
-					<i class="fa fa-facebook" aria-hidden="true"></i>
-				</a>
-				<a href="#!">
-					<i class="fa fa-twitter" aria-hidden="true"></i>
-				</a>
-				<a href="#!">
-					<i class="fa fa-telegram" aria-hidden="true"></i>
-				</a>
-			</div>
-			<div class="m-right">
-				<form class="search-form">
-					<button>
-						<i class="fa fa-search" aria-hidden="true"></i>
-					</button>
-					<input type="text" name="search" placeholder="Поиск">
-				</form>
-			</div>
-		</div>
-		<div class="m-lang-div">
-			<a href="#!">Русский</a>
-			<a href="#!">O'zbekcha</a>
-			<a href="#!">English</a>
-		</div>
-		<div class="m-logo">
-			<a href="#!">
-				<img src="{% static 'image/home/logo.png' %}">
-			</a>
-		</div>
-		<div class="menu-ul-div">
-			<ul class="menu-ul">
-				<li class="m-row-li"><a href="#">Главная</a></li>
-				<li class="m-row-li"><a href="#">О министерстве</a></li>
-				<li class="m-row-li"><a href="#">Пресс-центр</a></li>
-				<li class="m-row-li"><a href="#">Госуслуги</a></li>
-				<li class="m-row-li"><a href="#">Обращения</a></li>
-				<li class="m-row-li"><a href="#">Реестр НПА</a></li>
-				<li class="m-row-li"><a href="#">Интерактивные услуги</a></li>
-				<li class="m-row-li"><a href="#">Контакты</a></li>
-			</ul>
-		</div>
-	</main>
+
 
 {% block content %}
 

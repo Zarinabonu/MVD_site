@@ -9,9 +9,58 @@
     {% endblock %}
 </head>
 <body>
-{% block content %}
-
-	<section class="banner">
+{% block content %}<main class="menu">
+		<div class="mfa-link">
+			<div class="m-left">
+				<a href="#!">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					По происшествиям 102
+				</a>
+			</div>
+			<div class="m-center">
+				<a href="#!">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+				<a href="#!">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="#!">
+					<i class="fa fa-telegram" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div class="m-right">
+				<form class="search-form">
+					<button>
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+					<input type="text" name="search" placeholder="Поиск">
+				</form>
+			</div>
+		</div>
+		<div class="m-lang-div">
+			<a href="#!">Русский</a>
+			<a href="#!">O'zbekcha</a>
+			<a href="#!">English</a>
+		</div>
+		<div class="m-logo">
+			<a href="#!">
+				<img src="{% static 'image/home/logo.png' %}">
+			</a>
+		</div>
+		<div class="menu-ul-div">
+			<ul class="menu-ul">
+				<li class="m-row-li"><a href="#">Главная</a></li>
+				<li class="m-row-li"><a href="#">О министерстве</a></li>
+				<li class="m-row-li"><a href="#">Пресс-центр</a></li>
+				<li class="m-row-li"><a href="#">Госуслуги</a></li>
+				<li class="m-row-li"><a href="#">Обращения</a></li>
+				<li class="m-row-li"><a href="#">Реестр НПА</a></li>
+				<li class="m-row-li"><a href="#">Интерактивные услуги</a></li>
+				<li class="m-row-li"><a href="#">Контакты</a></li>
+			</ul>
+		</div>
+	</main>
+<section class="banner">
 		<div class="home-slide">
 			<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 			  <div class="carousel-inner">
@@ -142,7 +191,7 @@
 							<p>{{ new.title_name_ru }}</p>
 							<a class="readmore" href="#">{% trans "Подробнее" %}</a>
 						</div>
-						
+
 					</div>
 				</div>
                 {% endfor %}
@@ -198,7 +247,7 @@
 			    		<div class="us-icon-div">
 			    			<img src="{% static 'image/home/uslugi5.png' %}">
 			    		</div>
-			    		<p>{% trans "Онлайн аукцион <br> автономеров" %}</p>
+			    		<p>{% trans "Онлайн аукцион" %} <br> {% trans "автономеров" %}</p>
 			    	</aside>
 			    </div>
 			    <div class="item">
@@ -366,63 +415,14 @@
 			<div class="row">
 				<div class="col-lg-4 peres-left">
 					<ul class="peres-ul">
+                        {% for c in cities %}
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Город Ташкент" %}</span>
-							<span>19</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {{ c.City }}</span>
+							         <span>{{ c.count.counter__sum }}</span>
 						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Ташкентская область" %}</span>
-							<span>8</span>
-						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Самаркандская область" %}</span>
-							<span>6</span>
-						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Сырдарьинская область" %}</span>
-							<span>3</span>
-						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Джизакская область" %}</span>
-							<span>1</span>
-						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Бухарская область" %}</span>
-							<span>4</span>
-						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Навоийская область" %}</span>
-							<span>3</span>
-						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Ферганская область" %}</span>
-							<span>6</span>
-						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Андижанская область" %}</span>
-							<span>2</span>
-						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Наманганская область" %}</span>
-							<span>1</span>
-						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Сурхандарьинская область" %}</span>
-							<span>4</span>
-						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Кашкадарьинская область" %}</span>
-							<span>5</span>
-						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {% trans "Хорезмская область" %}</span>
-							<span>2</span>
-						</li>
-						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i>{% trans " Республика Каракалпакстан" %}</span>
-							<span>4</span>
-						</li>
-						
+                        {% endfor %}
+
+
 					</ul>
 				</div>
 				<div class="col-lg-8 peres-right">
@@ -505,10 +505,10 @@
 							</div>
 							<div>
 								<h1>25</h1>
-								<p>Другие <br> переступления</p>
+								<p>{% trans "Другие" %} <br> {% trans "переступления</p>
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
@@ -535,7 +535,7 @@
 						   mapsvg:geoViewBox="55.997099 45.594337 73.133286 37.176101"
 						   width="792.4873"
 						   height="516.87848">
-						 
+
 						  <path
 						     style="fill:#ffffff;fill-opacity:1;stroke:#fff;stroke-width:0.5;stroke-opacity:1"
 						     d="m 134.41007,7.1297222 -3.4,6.4199998 -1,3.43 -0.61,3.82 2.02,2.82 1,3.02 -1.81,2.62 -2.82,5.23 -1.41,2.21 2.22,-1 1.61,-2.02 1.41,-1 3.82,0.6 2.42,0.6 0.2,3.23 -2.82,0.4 -0.2,8.25 -2.01,-1.01 -1.81,0.41 -1.82,2.01 0.61,2.42 3.22,2.61 3.02,1.81 -1.01,3.23 0,4.02 -1.41,3.02 -2.82,1.01 -1.81,-1.01 -1.2,-2.82 -1.62,0 0,3.42 1.21,1.61 0.2,6.24 0.41,4.03 3.02,1.81 2.21,-2.41 2.42,-4.23 1.81,-4.03 2.41,-1.41 3.02,1.61 2.42,-0.8 -0.81,-2.82 -1.21,-2.62 -0.8,-4.62 0.6,-2.62 1.41,-1.41 1.81,-0.2 2.22,0 1,-4.23 2.82,-6.04 3.22,-5.43 2.02,-5.84 -0.36,-7.73 0,0 56.78,40.99 0,0 -3.89,0.36 1.01,2.01 1.61,1.41 1.01,1.41 -0.81,3.82 -2.82,5.03 -4.63,4.63 -6.24,5.04 -1.61,3.42 1.01,1.81 -1.21,1.81 -3.42,0 -0.6,2.62 -7.05,2.819998 -4.83,1.61 -5.03,1 -3.63,-1.21 -2.01,0.61 -3.82,0.8 -1.21,-1 -2.42,-1.41 -3.62,2.21 -4.43,-0.2 -6.04,-0.6 -3.02,-0.41 -2.61,-2.21 -5.24,-0.799998 -1.81,-1.82 -2.21,-1 -1.01,-3.63 2.82,-1.81 1.81,-2.21 -0.8,-3.63 -1.61,-1 -2.62,1.21 -5.03,1.61 -1.82,0.8 -2.41,-0.2 -1.61,0.4 -1.01,2.02 -2.01,-0.61 -2.62,-2.01 -3.02,-0.2 -4.02,-1.61 -3.02,-1.41 -2.22,-2.62 -2.21,-5.23 -0.4,-5.24 3.02,-8.45 0.4,-2.62 -2.01,-3.62 -1.21,-2.82 -0.2,-6.04 0.4,-4.63 2.01,-5.43 3.02,-4.83 1.21,-5.64 2.62,-2.62 0.2,-5.83 2.01,-3.22 3.83,-3.43 0.2,-4.8299998 1.61,-3.22 0.17,-3.55 0,0"
@@ -630,7 +630,7 @@
 								<div>
 									<img src="{% static 'image/home/phone.png' %}">
 									<span class="ml-2">{%  trans "Контактная информация" %}</span>
-								</div>	
+								</div>
 							</div>
 						</div>
 					</div>
@@ -713,7 +713,7 @@
 			    			<img src="{% static 'image/home/link3.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			{%  trans "Портал открытых данных<br> Республики Узбекистан" %}
+			    			{%  trans "Портал открытых данных" %}<br> {% trans "Республики Узбекистан" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -723,7 +723,7 @@
 			    			<img src="{% static 'image/home/link4.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			{%  trans "Институт пожарной<br> безопасности МВД" %}
+			    			{%  trans "Институт пожарной" %}<br>{% trans " безопасности МВД" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -743,7 +743,7 @@
 			    			<img src="{% static 'image/home/link1.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			{%  trans "Официальный веб-сайт " %}<br> {%  trans "Президента Республики <br> Узбекистан" %}
+			    			{%  trans "Официальный веб-сайт " %}<br> {%  trans "Президента Республики " %}<br> {% trans "Узбекистан" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -753,7 +753,7 @@
 			    			<img src="{% static 'image/home/link2.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			{%  trans "Правительственный портал <br> Республики Узбекистан" %}
+			    			{%  trans "Правительственный портал" %} <br> {% trans "Республики Узбекистан" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -763,7 +763,7 @@
 			    			<img src="{% static 'image/home/link3.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			{%  trans "Портал открытых данных <br> Республики Узбекистан" %}
+			    			{%  trans "Портал открытых данных" %} <br> {% trans "Республики Узбекистан" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -773,7 +773,7 @@
 			    			<img src="{% static 'image/home/link4.png' %}">
 			    		</a>
 			    		<a class="polez-link-bottom" href="#!">
-			    			{%  trans "Институт пожарной<br> безопасности МВД" %}
+			    			{%  trans "Институт пожарной" %}<br> {% trans "безопасности МВД" %}
 			    		</a>
 			    	</aside>
 			    </div>
@@ -787,16 +787,16 @@
 			    		</a>
 			    	</aside>
 			    </div>
-			    
-			    
-			</div>			
+
+
+			</div>
 		</div>
 	</section>
 	<footer class="footer-one">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-9 foo-one-col">
-					<div class="menu-foo">	
+					<div class="menu-foo">
 						<a href="#!">{%  trans "О министерстве" %}</a>
 						<a href="#!">{%  trans "Пресс-центр" %}</a>
 						<a href="#!">{%  trans "Госуслуги" %}</a>
@@ -824,7 +824,7 @@
 							<img src="{% static 'image/home/footer.png' %}">
 						</a>
 						<a href="#!">
-							<span>{%  trans "МИНИСТЕРСТВО ВНУТРЕННИХ <br> ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН" %}</span>
+							<span>{%  trans "МИНИСТЕРСТВО ВНУТРЕННИХ" %} <br> {% trans "ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН" %}</span>
 						</a>
 					</aside>
 				</div>

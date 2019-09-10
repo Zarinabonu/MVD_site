@@ -1,0 +1,340 @@
+{% extends 'block.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block css %}
+
+    {% endblock %}
+
+</head>
+<body>
+{% block content %}
+
+    <section class="news-banner nb">
+		<div class="nb-image-div"></div>
+		<div class="banner-top">
+			<div class="ban-left">
+				<div>
+					<a href="#">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-telegram" aria-hidden="true"></i>
+					</a>
+					<a class="link-phone" href="#">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+						По происшествиям 102
+					</a>
+				</div>
+			</div>
+			<div class="ban-center">
+				<div class="ban-center-top">
+					<a href="#">
+						<img src="image/home/logo.png">
+					</a>
+				</div>
+				<div class="ban-center-bottom">
+					<h3>
+						МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН
+					</h3>
+				</div>
+			</div>
+			<div class="ban-right">
+				<div class="ban-right-inner">
+					<div>
+						<button class="dinamik ban-btn">
+							<i class="fa fa-volume-up" aria-hidden="true"></i>
+						</button>
+						<button class="mobile ban-btn">
+							<i class="fa fa-mobile" aria-hidden="true"></i>
+						</button>
+						<button class="eyes ban-btn">
+							<img src="image/home/eyes.png">
+						</button>
+					</div>
+					<form class="search-form">
+						<button>
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+						<input type="text" name="search" placeholder="Поиск">
+					</form>
+					<div class="lang">
+						<div class="lang-show">
+							<img src="image/home/lang.png">
+							<a class="lang-link" href="#">Русский</a>
+							<img src="image/home/drop.png">
+						</div>
+						<ul class="lang-hide">
+							<li><a class="lang-link-hide" href="#">English</a></li>
+							<li><a class="lang-link-hide" href="#">O'zbek</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="ns">
+		<div class="news-heading">
+			<h3 class="news-head">Международное сотрудничество</h3>
+		</div>
+		
+		<div class="container con-pad">
+			<div class="ns-left">
+				<div class="news-right-div">
+					<h5>Пресс-центр</h5>
+					<ul class="news-right-ul">
+						<li class="active"><a href="#!">Международное сотрудничество</a></li>
+						<li class=""><a href="#!">Профилактика правонарушений</a></li>
+						<li class=""><a href="#!">Деятельность органов внутренних дел</a></li>
+						<li class=""><a href="#!">Работа с кадрами</a></li>
+						<li class=""><a href="#!">Без вести пропавшие</a></li>
+						<li class=""><a href="#!">Раздел «Внимание розыск!»</a></li>
+						<li class=""><a href="#!">Фотогалерея</a></li>
+						<li class=""><a href="#!">Видеотека</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-9 col-md-8 col-sm-6 ns-col-left">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-4 col-md-6">
+								<aside class="nps">
+									<figure>
+										<img src="{%  static 'image/news/news1.jpg' %}" >
+									</figure>
+									<div class="nps-center"><span class="left">6 августа 2019</span><img src="{%  static 'image/news/eye.png' %}"><span class="right">568</span></div>
+									<p>Состоялся визит делегации Министерства внутренних дел Республики Узбекистан в...</p>
+									<a href="#!">Подробнее</a>
+								</aside>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<aside class="nps">
+									<figure>
+										<img src="{%  static 'image/news/news2.jpg' %}">
+									</figure>
+									<div class="nps-center"><span class="left">6 августа 2019</span><img src="{%  static 'image/news/eye.png' %}"><span class="right">538</span></div>
+									<p>Открыт путь для современного и инновационного подхода к вопросу подготовки кадров</p>
+									<a href="#!">Подробнее</a>
+								</aside>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<aside class="nps">
+									<figure>
+										<img src="{%  static 'image/news/news3.jpg' %}">
+									</figure>
+									<div class="nps-center"><span class="left">6 августа 2019</span><img src="{%  static 'image/news/eye.png' %}"><span class="right">644</span></div>
+									<p>Усиливается взаимодействие с Китаем в части научно-исследовательской деятельности в области пожарной...</p>
+									<a href="#!">Подробнее</a>
+								</aside>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<aside class="nps">
+									<figure>
+										<img src="{%  static 'image/news/news1.jpg' %}">
+									</figure>
+									<div class="nps-center"><span class="left">6 августа 2019</span><img src="{%  static 'image/news/eye.png' %}"><span class="right">568</span></div>
+									<p>Состоялся визит делегации Министерства внутренних дел Республики Узбекистан в...</p>
+									<a href="#!">Подробнее</a>
+								</aside>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<aside class="nps">
+									<figure>
+										<img src="{%  static 'image/news/news2.jpg' %}">
+									</figure>
+									<div class="nps-center"><span class="left">6 августа 2019</span><img src="{%  static 'image/news/eye.png' %}"><span class="right">538</span></div>
+									<p>Открыт путь для современного и инновационного подхода к вопросу подготовки кадров</p>
+									<a href="#!">Подробнее</a>
+								</aside>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<aside class="nps">
+									<figure>
+										<img src="{%  static 'image/news/news3.jpg' %}">
+									</figure>
+									<div class="nps-center"><span class="left">6 августа 2019</span><img src="{%  static 'image/news/eye.png' %}"><span class="right">644</span></div>
+									<p>Усиливается взаимодействие с Китаем в части научно-исследовательской деятельности в области пожарной...</p>
+									<a href="#!">Подробнее</a>
+								</aside>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<aside class="nps">
+									<figure>
+										<img src="{%  static 'image/news/news1.jpg' %}">
+									</figure>
+									<div class="nps-center"><span class="left">6 августа 2019</span><img src="{%  static 'image/news/eye.png' %}"><span class="right">568</span></div>
+									<p>Состоялся визит делегации Министерства внутренних дел Республики Узбекистан в...</p>
+									<a href="#!">Подробнее</a>
+								</aside>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<aside class="nps">
+									<figure>
+										<img src="{%  static 'image/news/news2.jpg' %}">
+									</figure>
+									<div class="nps-center"><span class="left">6 августа 2019</span><img src="{%  static 'image/news/eye.png' %}"><span class="right">538</span></div>
+									<p>Открыт путь для современного и инновационного подхода к вопросу подготовки кадров</p>
+									<a href="#!">Подробнее</a>
+								</aside>
+							</div>
+							<div class="col-xl-4 col-md-6">
+								<aside class="nps">
+									<figure>
+										<img src="{%  static 'image/news/news3.jpg' %}">
+									</figure>
+									<div class="nps-center"><span class="left">6 августа 2019</span><img src="{%  static 'image/news/eye.png' %}"><span class="right">644</span></div>
+									<p>Усиливается взаимодействие с Китаем в части научно-исследовательской деятельности в области пожарной...</p>
+									<a href="#!">Подробнее</a>
+								</aside>
+							</div>
+							
+						</div>
+					</div>
+					<div class="ns-pagination">
+						<nav aria-label="Page navigation example">
+						  <ul class="pagination">
+						    <li class="page-item">
+						      <a class="page-link next-prev" href="#" aria-label="Previous">
+						        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+						        <span class="sr-only">Previous</span>
+						      </a>
+						    </li>
+						    <li class="page-item"><a class="page-link" href="#">1</a></li>
+						    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+						    <li class="page-item"><a class="page-link" href="#">3</a></li>
+						    <li class="page-item">
+						      <a class="page-link next-prev" href="#" aria-label="Next">
+						        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+						        <span class="sr-only">Next</span>
+						      </a>
+						    </li>
+						  </ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-xl-3 col-md-4 col-sm-6 ns-right">
+					<div class="news-right-div">
+						<h5>Пресс-центр</h5>
+						<ul class="news-right-ul">
+							<li class="active"><a href="#!">Международное сотрудничество</a></li>
+							<li class=""><a href="#!">Профилактика правонарушений</a></li>
+							<li class=""><a href="#!">Деятельность органов внутренних дел</a></li>
+							<li class=""><a href="#!">Работа с кадрами</a></li>
+							<li class=""><a href="#!">Без вести пропавшие</a></li>
+							<li class=""><a href="#!">Раздел «Внимание розыск!»</a></li>
+							<li class=""><a href="#!">Фотогалерея</a></li>
+							<li class=""><a href="#!">Видеотека</a></li>
+						</ul>
+					</div>			
+				</div>
+			</div>
+		</div>
+	</section>
+		<footer class="footer-one">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 foo-one-col">
+					<div class="menu-foo">	
+						<a href="#!">О министерстве</a>
+						<a href="#!">Пресс-центр</a>
+						<a href="#!">Госуслуги</a>
+						<a href="#!">Обрашения</a>
+						<a href="#!">Реестр НПА</a>
+						<a href="#!">Интерактивные услуги</a>
+						<a href="#!">Контакты</a>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<span class="foo-top-span">Мы в соц.сетях:</span>
+					<a class="foo-top-icon" href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a class="foo-top-icon" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a class="foo-top-icon" href="#!"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer class="footer-two">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-12">
+					<aside class="foo-two-in">
+						<a href="#!">
+							<img src="{%  static 'image/home/footer.png' %}">
+						</a>
+						<a href="#!">
+							<span>МИНИСТЕРСТВО ВНУТРЕННИХ<br> ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН</span>
+						</a>
+					</aside>
+				</div>
+				<div class="col-lg-2 col-md-6 foo-two-col">
+					<img src="{%  static 'image/home/foo-phone.png' %}">
+					<div>
+						<p>По происшествиям</p>
+						<h6>102</h6>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 foo-two-col">
+					<img src="{%  static 'image/home/foo-phone.png' %}">
+					<div>
+						<p>Телефон доверия</p>
+						<h6>1102</h6>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-12 footer-ctrl">
+					<p>Внимание! Если Вы нашли ошибку в тексте, выделите ее и нажмите<br> Ctrl + Enter для уведомлениия администрации </p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer class="footer-three">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 foo-three-col">
+					<span>&copy; 2006-2019. Все права защищены</span>
+				</div>
+				<div class="col-lg-5 foo-three-col">
+					<span>При использовании материалов ссылка на<a href="#!"> www.mvd.uz </a>обязательна</span>
+				</div>
+				<div class="col-lg-3 foo-three-col">
+					<span>Разработка сайта: <a href="#!">Online Service Group</a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<section class="section-hide">
+		<div class="ctrl-enter">
+			<form>
+			  <p>Muallifga xatolar bo'yicha xabar berish:</p>
+			  <hr>
+			  <div class="form-group">
+			    <label for="formGroupExampleInput">Matn xato bilan:</label>
+			    <textarea id="text-area-xato" class="form-control" rows="4" cols="36"></textarea>
+			  </div>
+			  <div class="form-group">
+			    <label for="formGroupExampleInput2">Sizning izoxingiz yoki to`g`ri versiya:</label>
+			    <textarea id="text-area-right" class="form-control" rows="4" cols="36"></textarea>
+			  </div>
+			  <div class="ctrl-btn">
+			  	<button class="btn-bekor" type="button">Bekor qilish</button>
+			  	<button type="submit">Jo'natish</button>
+			  </div>
+			</form>
+		</div>
+	</section>
+	<script type="text/javascript" src="{%  static 'lib/jquery/jquery-3.4.1.min.js' %}"></script>
+	<script type="text/javascript" src="{%  static 'lib/jquery/popper.min.js' %}"></script>
+	<script type="text/javascript" src="{%  static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{%  static 'lib/Owl/dist/owl.carousel.min.js' %}"></script>
+	<script type="text/javascript" src="{%  static 'js/main.js' %}"></script>
+{% endblock %}
+</body>
+</html>
+

@@ -22,6 +22,27 @@ body {
   /*background-color: #555;*/
 }
 /*=====================*/
+h1, .h1 {
+	  font-size: 2.5rem; margin: 0; }
+h2, .h2 {
+  font-size: 2rem; margin: 0; }
+
+h3, .h3 {
+  font-size: 1.75rem; margin: 0; }
+
+h4, .h4 {
+  font-size: 1.5rem; margin: 0; }
+
+h5, .h5 {
+  font-size: 1.25rem; margin: 0; }
+
+h6, .h6 {
+  font-size: 1rem; 
+  margin: 0; 
+}
+p {
+	font-size: 0.90rem;
+}
 figure {
 	margin: 0;
 	padding: 0;
@@ -100,6 +121,7 @@ div.top-lang {
 	display: flex;
 }
 /*-----------header------------*/
+
 /*===========m menu=============*/
 div.m-btn-div button.m-btn {
 	background-color: transparent;
@@ -190,7 +212,6 @@ section.full-menu {
 	background-color: #211C12;
 	z-index: 4;
 	display: none;
-	height: 670px;
 }
 div.full-row {
 	text-align: center;
@@ -224,7 +245,6 @@ div.banner-praz {
 div.banner-top {
 	position: absolute;
 	width: 100%;
-	height: 100px;
 	top: 0;
 	left: 0;
 	display: flex;
@@ -256,7 +276,7 @@ div.ban-right-inner {
 	display: flex;
 }
 a.link-phone {
-	padding-left: 60px;
+	margin-left: 68px!important;
 }
 button.ban-btn {
 	background-color: transparent;
@@ -307,7 +327,7 @@ div.lang:hover ul.lang-hide {
 }
 div.ban-center {
 	width: 34%;
-	padding: 0 10px;
+	padding: 0 20px;
 }
 div.ban-center-bottom h3 {
 	color: #fff;
@@ -783,7 +803,6 @@ div.foo-two-col h6 {
 	font-weight: 600;
 }
 footer.footer-three {
-	margin-top: 2.5px;
 	background-color: #2b2b2b;
 }
 footer.footer-three span,
@@ -833,3 +852,137 @@ section.section-hide {
 }
 
 /*---------section second------*/
+
+/*==================================================news page==========================================================*/
+section.news-banner {
+	padding: 0;
+	position: relative;
+}
+div.nb-image-div {
+	background-image: url(../image/news/news-banner.jpg);
+	width: 100%;
+	background-position: center;
+}
+div.nb-image-div:before {
+	background-color: #211c12;
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
+	content: '';
+	position: absolute;
+}
+
+main.news div.menu-ul-div {
+	display: none;
+}
+div.news-heading h3.news-head {
+	color: #edd290;
+	font-weight: 600;
+	text-align: center;
+}
+div.news-tab-ul {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px 0.1px #ddd;
+}
+.ns div.nnews-inner {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px 0.1px #ddd;
+	padding: 15px;
+}
+.ns figure img {
+	border-radius: 6px;
+}
+div.news-right-div {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px 0.1px #ddd;
+	padding-bottom: 10px;
+}
+div.news-right-div h5 {
+	color: #edd290;
+	font-weight: 600;
+	padding: 15px 5px 15px 25px;
+}
+ul.news-right-ul li {
+	padding: 7px 5px 7px 25px;
+}
+ul.news-right-ul li.active {
+	background-color: #f0f0f0;
+}
+ul.news-right-ul li a {
+	color: #4f4f4f;
+	display: block;
+	font-size: 14px;
+}
+aside.nps {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px 0.1px #ddd;
+	padding: 15px;
+	padding-bottom: 25px;
+}
+aside.nps div.nps-center {
+	margin: 15px 0px;
+}
+aside.nps div.nps-center img {
+	margin-left: 20px;
+	margin-right: 5px;
+	padding-bottom: 4px;
+}
+aside.nps div.nps-center span.left {
+	background-color: #edd290;
+	color: #fff;
+	padding: 4px 20px;
+	border-radius: 4px;
+	font-size: 14px;
+}
+aside.nps div.nps-center span.right {
+	color: #edd290;
+	font-size: 14px;
+}
+aside.nps p {
+	color: #3f3f3f;
+	margin-bottom: 15px;
+}
+aside.nps a {
+	border-bottom: 1px solid #4a4a4a;
+	color: #4a4a4a;
+	font-weight: 600;
+}
+div.ns-pagination {
+	margin: 45px 0 0 0;
+	text-align: center;
+}
+div.ns-pagination ul.pagination {
+	justify-content: center;
+}
+div.ns-pagination ul li a.page-link {
+	color: #edd290;
+	background-color: transparent;
+	border: 1px solid #edd290;
+	border-radius: 4px;
+}
+div.ns-pagination ul li.active a.page-link {
+	background-color: #edd290;
+	color: #fff;
+}
+div.ns-pagination li.page-item.active a.page-link {
+	border-color: #edd290;
+}
+div.ns-pagination ul li.page-item {
+	padding: 0 4px;
+}
+div.ns-pagination ul li.page-item:focus {
+	border: none;
+	box-shadow: none;
+	outline: none;
+}
+a.page-link:focus {
+	box-shadow: none;
+}
+a.next-prev {
+	border-color: transparent!important;
+}
+/*--------------------------------------------------news page----------------------------------------------------------*/

@@ -2,6 +2,14 @@ from rest_framework.serializers import ModelSerializer
 
 from app.model import Criminal
 
+from app.model import Static_criminal, Criminal_type, Region
+
+
+class Static_criminalSerialzier(ModelSerializer):
+    class Meta:
+        model = Static_criminal
+        fields = ('region', 'criminal_type', 'count')
+
 
 class CriminalSerializer(ModelSerializer):
     class Meta:

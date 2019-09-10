@@ -1,0 +1,101 @@
+{% extends 'cms/_base.html' %}
+{% load static %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-main__title">
+                            <h2>О компании</h2>
+                        </div>
+                        <a href="{% url 'news-create' %}" type="button" class="btn btn-info m-t-10 float-right">Добавить</a>
+                        <!-- Add Contact Popup Model -->
+                        <div class="table-responsive">
+                            <table id="demo-foo-addrow" class="table table-bordered m-t-30 table-hover contact-list" data-paging="true" data-paging-size="7">
+                                <thead>
+                                    <tr>
+                                        <th width="1%">#</th>
+                                        <th width=1%></th>
+                                        <th width="100">Заголовок</th>
+                                        
+                                        <th width="1%"></th>
+                                        <th width="1%">Статус</th>
+                                        <th width="1%"></th>
+                                    </tr>
+                                <tbody>
+                                    
+                                    {% for new in news %}
+                                        <tr>
+                                            <td>{{ new.id }}</td>
+                                            <td>
+                                                    
+                                                
+                                            </td>
+                                            <td>
+                                                <span>{{ new.title_name_ru }}</span>
+                                            </td>
+                                            
+                                            <td><a href="{% url 'news-update' new.id %}" class="label label-info"><i class="fas fa-edit"></i> Ред-ть</a></td>
+                                           
+                                            <td><a href="#" class="deleteButton label label-danger" data-url="{% url 'api-news-delete' new.id %}" ><i class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                    {% endfor %}
+                                        
+                                    
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End PAge Content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(document).ready(function () {
+            $(".deleteButton").click(function (e) {
+                e.preventDefault();
+
+                var conf = confirm('Delete');
+
+                var url = $(this).data("url");
+
+                if(conf){
+                    console.log(conf);
+                    $.ajax({
+                        headers: { "X-CSRFToken": "{{csrf_token}}" },
+                        url: url,
+                        processData: false,
+                        method: 'DELETE',
+                        success: function (data) {
+                            location.reload();
+                        },
+                        error: function (data) {
+                            alert("Error");
+                        }
+                    });
+                }
+
+
+            });
+        });
+    </script>
+{% endblock %}
