@@ -9,7 +9,7 @@ from django.views.generic import TemplateView, ListView, DetailView, CreateView
 from app.model import News, Type_news, Forms, Type_form, Criminal
 
 
-class Admin(View):
+class Admin(LoginRequiredMixin,View):
     def get(self, request):
         return render(request, 'cms/index.html')
 

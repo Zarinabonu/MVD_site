@@ -67,6 +67,7 @@ class International_detailView(DetailView):
     template_name = 'newspodrobni.html'
     pk_url_kwarg = 'id'
     model = International_busines
+    context_object_name = 'news_detail'
 
 
 
