@@ -1,0 +1,138 @@
+{% extends 'block.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block css %}
+
+    {% endblock %}
+
+</head>
+<body>
+
+    {% block content %}
+
+    <section class="news-banner nb">
+		<div class="nb-image-div"></div>
+		<div class="banner-top">
+			<div class="ban-left">
+				<div>
+					<a href="#">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-telegram" aria-hidden="true"></i>
+					</a>
+					<a class="link-phone" href="#">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+						По происшествиям 102
+					</a>
+				</div>
+			</div>
+			<div class="ban-center">
+				<div class="ban-center-top">
+					<a href="#">
+						<img src="image/home/logo.png">
+					</a>
+				</div>
+				<div class="ban-center-bottom">
+					<h3>
+						МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН
+					</h3>
+				</div>
+			</div>
+			<div class="ban-right">
+				<div class="ban-right-inner">
+					<div>
+						<button class="dinamik ban-btn">
+							<i class="fa fa-volume-up" aria-hidden="true"></i>
+						</button>
+						<button class="mobile ban-btn">
+							<i class="fa fa-mobile" aria-hidden="true"></i>
+						</button>
+						<button class="eyes ban-btn">
+							<img src="image/home/eyes.png">
+						</button>
+					</div>
+					<form class="search-form">
+						<button>
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+						<input type="text" name="search" placeholder="Поиск">
+					</form>
+					<div class="lang">
+						<div class="lang-show">
+							<img src="image/home/lang.png">
+							<a class="lang-link" href="#">Русский</a>
+							<img src="image/home/drop.png">
+						</div>
+						<ul class="lang-hide">
+							<li><a class="lang-link-hide" href="#">English</a></li>
+							<li><a class="lang-link-hide" href="#">O'zbek</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% block news_content %}
+{% endblock %}
+
+	<section class="ns">
+		<div class="news-heading">
+			<h3 class="news-head">Международное сотрудничество</h3>
+		</div>
+
+		<div class="container con-pad">
+			<div class="ns-left">
+				<div class="news-right-div">
+					<h5>Пресс-центр</h5>
+					<ul class="news-right-ul">
+						<li class="active"><a href="#!">Международное сотрудничество</a></li>
+						<li class=""><a href="#!">Профилактика правонарушений</a></li>
+						<li class=""><a href="#!">Деятельность органов внутренних дел</a></li>
+						<li class=""><a href="#!">Работа с кадрами</a></li>
+						<li class=""><a href="#!">Без вести пропавшие</a></li>
+						<li class=""><a href="#!">Раздел «Внимание розыск!»</a></li>
+						<li class=""><a href="#!">Фотогалерея</a></li>
+						<li class=""><a href="#!">Видеотека</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="section-hide">
+		<div class="ctrl-enter">
+			<form>
+			  <p>Muallifga xatolar bo'yicha xabar berish:</p>
+			  <hr>
+			  <div class="form-group">
+			    <label for="formGroupExampleInput">Matn xato bilan:</label>
+			    <textarea id="text-area-xato" class="form-control" rows="4" cols="36"></textarea>
+			  </div>
+			  <div class="form-group">
+			    <label for="formGroupExampleInput2">Sizning izoxingiz yoki to`g`ri versiya:</label>
+			    <textarea id="text-area-right" class="form-control" rows="4" cols="36"></textarea>
+			  </div>
+			  <div class="ctrl-btn">
+			  	<button class="btn-bekor" type="button">Bekor qilish</button>
+			  	<button type="submit">Jo'natish</button>
+			  </div>
+			</form>
+		</div>
+	</section>
+	<script type="text/javascript" src="{%  static 'lib/jquery/jquery-3.4.1.min.js' %}"></script>
+	<script type="text/javascript" src="{%  static 'lib/jquery/popper.min.js' %}"></script>
+	<script type="text/javascript" src="{%  static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{%  static 'lib/Owl/dist/owl.carousel.min.js' %}"></script>
+	<script type="text/javascript" src="{%  static 'js/main.js' %}"></script>
+{% endblock %}
+</body>
+</html>
+

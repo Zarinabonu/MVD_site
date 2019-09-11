@@ -25,9 +25,9 @@
 <header>
 		<nav class="row-nav">
 			<ul class="nav-ul">
-				<li class="row-li"><a href="#">Главная</a></li>
+				<li class="row-li"><a href="{% url 'main' %}">Главная</a></li>
 				<li class="row-li"><a href="#">О министерстве</a></li>
-				<li class="row-li"><a href="#">Пресс-центр</a></li>
+				<li class="row-li"><a href="{% url 'news' %}">Пресс-центр</a></li>
 				<li class="row-li"><a href="#">Госуслуги</a></li>
 				<li class="row-li"><a href="#">Обращения</a></li>
 				<li class="row-li"><a href="#">Реестр НПА</a></li>
@@ -50,13 +50,13 @@
 		<div class="container">
 			 <div class="row full-row">
 			 	<div class="col-md-3">
-			 		<a class="full-top-link" href="#!">Главная</a>
+			 		<a class="full-top-link" href="{% url 'main' %}">Главная</a>
 			 	</div>
 			 	<div class="col-md-3">
 			 		<a class="full-top-link" href="#!">О министерстве</a>
 			 	</div>
 			 	<div class="col-md-3">
-			 		<a class="full-top-link" href="#!">Пресс-центр</a>
+			 		<a class="full-top-link" href="{% url 'news' %}">Пресс-центр</a>
 			 	</div>
 			 	<div class="col-md-3">
 			 		<a class="full-top-link" href="#!">Госуслуги</a>
@@ -77,6 +77,7 @@
 			 </div>
 		</div>
 	</section>
+
 	<section class="hmobil">
 		<ul>
 			<li class="mob-li"><a href="#">Главная</a></li>
@@ -94,4 +95,75 @@
 {% block content %}
 
 {% endblock %}
+<footer class="footer-one">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 foo-one-col">
+					<div class="menu-foo">
+						<a href="#!">{%  trans "О министерстве" %}</a>
+						<a href="#!">{%  trans "Пресс-центр" %}</a>
+						<a href="#!">{%  trans "Госуслуги" %}</a>
+						<a href="#!">{%  trans "Обрашения" %}</a>
+						<a href="#!">{%  trans "Реестр НПА" %}</a>
+						<a href="#!">{%  trans "Интерактивные услуги" %}</a>
+						<a href="#!">{%  trans "Контакты" %}</a>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<span class="foo-top-span">{%  trans "Мы в соц.сетях:" %}</span>
+					<a class="foo-top-icon" href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a class="foo-top-icon" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a class="foo-top-icon" href="#!"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer class="footer-two">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-12">
+					<aside class="foo-two-in">
+						<a href="#!">
+							<img src="{% static 'image/home/footer.png' %}">
+						</a>
+						<a href="#!">
+							<span>{%  trans "МИНИСТЕРСТВО ВНУТРЕННИХ" %} <br> {% trans "ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН" %}</span>
+						</a>
+					</aside>
+				</div>
+				<div class="col-lg-2 col-md-6 foo-two-col">
+					<img src="{% static 'image/home/foo-phone.png' %}">
+					<div>
+						<p>{%  trans "По происшествиям" %}</p>
+						<h6>102</h6>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 foo-two-col">
+					<img src="{% static 'image/home/foo-phone.png' %}">
+					<div>
+						<p>{%  trans "Телефон доверия" %}</p>
+						<h6>1102</h6>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-12 footer-ctrl">
+					<p>{%  trans "Внимание! Если Вы нашли ошибку в тексте, выделите ее и нажмите" %}<br> Ctrl + Enter {%  trans "для уведомлениия администрации " %}</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer class="footer-three">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 foo-three-col">
+					<span>&copy; 2006-2019. {%  trans "Все права защищены" %}</span>
+				</div>
+				<div class="col-lg-5 foo-three-col">
+					<span>{%  trans "При использовании материалов ссылка на" %}<a href="#!"> www.mvd.uz </a>{%  trans "обязательна" %}</span>
+				</div>
+				<div class="col-lg-3 foo-three-col">
+					<span>{%  trans "Разработка сайта:" %} <a href="#!">Online Service Group</a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>

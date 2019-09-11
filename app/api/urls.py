@@ -7,5 +7,6 @@ urlpatterns = [
     path('news/', include('app.api.news.urls')),
     path('reform/', include('app.api.reforms.urls')),
     path('criminal/', include('app.api.criminal.urls')),
+    path('international/', include('app.api.international.urls')),
 
 ]

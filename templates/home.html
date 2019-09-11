@@ -177,20 +177,18 @@
 		</div>
 		<div class="container con-pad">
 			<div class="row">
-				{% for new in news %}
+				{% for type in news_type %}
 				<div class="col-lg-6">
 					<div class="news-inner">
-						<h5>{{ new.type}}</h5>
+						<h5>{{ type }}</h5>
 						<div class="news-item">
-							<button class="button-yellow">{{ new.created }}</button>
-							<p>{{ new.title_name_ru }}</p>
+                            {% for news in type.news_set.all %}
+							<button class="button-yellow">{{ news.created}}</button>
+							<p>{{ news.title_name_ru }}</p>
 							<a class="readmore" href="#">{% trans "Подробнее" %}</a>
+                            {% endfor %}
 						</div>
-						<div class="news-item">
-							<button class="button-yellow">{{ new.created }}</button>
-							<p>{{ new.title_name_ru }}</p>
-							<a class="readmore" href="#">{% trans "Подробнее" %}</a>
-						</div>
+
 
 					</div>
 				</div>
@@ -301,9 +299,10 @@
 		</div>
 		<div class="container con-pad">
 			<div class="row">
+                {% for type in reforms %}
 				<div class="col-lg-6">
-					<h5 class="reform-h5">{% trans "Реформы по Республике Узбекистан" %}</h5>
-					{% for reform in reforms %}
+					<h5 class="reform-h5">{{ type }}</h5>
+                  {% for  reform in type.forms_set.all %}
 					<div class="reform-item">
 						<div class="inner">
 							<div class="re-left">
@@ -311,32 +310,18 @@
 							</div>
 							<div class="re-right">
 								<button class="button-yellow">{{ reform.created}}</button>
-								<a href="#!">
+								<a href="#">
 									<p>{{ reform.title_name_ru }}</p>
 								</a>
 							</div>
 						</div>
+
 					</div>
                     {% endfor %}
+
 				</div>
-				<div class="col-lg-6">
-					<h5 class="reform-h5">{% trans "Реформы Министерства Внутренних Дел" %}</h5>
-					{% for reform in reforms %}
-					<div class="reform-item">
-						<div class="inner">
-							<div class="re-left">
-								<img src={{ reform.image.url }}>
-							</div>
-							<div class="re-right">
-								<button class="button-yellow">{{ reform.created}}</button>
-								<a href="#!">
-									<p>{{ reform.title_name_ru }}</p>
-								</a>
-							</div>
-						</div>
-					</div>
-                    {% endfor %}
-				</div>
+                {% endfor %}
+
 			</div>
 		</div>
 	</section>
@@ -427,87 +412,18 @@
 				</div>
 				<div class="col-lg-8 peres-right">
 					<div class="peres-flex">
+                        {% for criminal_ in criminal_count %}
 						<div class="peres-flex-in">
 							<div class="left">
-								<img src="{% static 'image/home/per1.png' %}">
+								<img src="{{ criminal_.imgae.url }}">
 							</div>
 							<div>
-								<h1>1</h1>
-								<p>Убийства</p>
+								<h1>{{ criminal_.criminal_count }}</h1>
+								<p>{{ criminal_.criminal_type}}</p>
 							</div>
 						</div>
-						<div class="peres-flex-in">
-							<div class="left">
-								<img src="{% static 'image/home/per2.png' %}">
-							</div>
-							<div>
-								<h1>1</h1>
-								<p>{% trans "Тяжелые травмы" %}</p>
-							</div>
-						</div>
-						<div class="peres-flex-in">
-							<div class="left">
-								<img src="{% static 'image/home/per3.png' %}">
-							</div>
-							<div>
-								<h1>3</h1>
-								<p>Хулиганство</p>
-							</div>
-						</div>
-						<div class="peres-flex-in">
-							<div class="left">
-								<img src="{% static 'image/home/per4.png' %}">
-							</div>
-							<div>
-								<h1>12</h1>
-								<p>Кряжа</p>
-							</div>
-						</div>
-						<div class="peres-flex-in">
-							<div class="left">
-								<img src="{% static 'image/home/per5.png' %}">
-							</div>
-							<div>
-								<h1>16</h1>
-								<p>Мошенничество</p>
-							</div>
-						</div>
-						<div class="peres-flex-in">
-							<div class="left">
-								<img src="{% static 'image/home/per6.png' %}">
-							</div>
-							<div>
-								<h1>10</h1>
-								<p>Наркомания</p>
-							</div>
-						</div>
-						<div class="peres-flex-in">
-							<div class="left">
-								<img src="{% static 'image/home/per7.png' %}">
-							</div>
-							<div>
-								<h1>1</h1>
-								<p>Грабеж</p>
-							</div>
-						</div>
-						<div class="peres-flex-in pad-le">
-							<div class="left">
-								<img src="{% static 'image/home/per8.png' %}">
-							</div>
-							<div>
-								<h1>25</h1>
-								<p>Дорожно-транспортные происшествия</p>
-							</div>
-						</div>
-						<div class="peres-flex-in">
-							<div class="left">
-								<img src="{% static 'image/home/per9.png' %}">
-							</div>
-							<div>
-								<h1>25</h1>
-								<p>{% trans "Другие" %} <br> {% trans "переступления</p>
-							</div>
-						</div>
+                        {% endfor %}
+
 
 					</div>
 				</div>
@@ -792,77 +708,7 @@
 			</div>
 		</div>
 	</section>
-	<footer class="footer-one">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 foo-one-col">
-					<div class="menu-foo">
-						<a href="#!">{%  trans "О министерстве" %}</a>
-						<a href="#!">{%  trans "Пресс-центр" %}</a>
-						<a href="#!">{%  trans "Госуслуги" %}</a>
-						<a href="#!">{%  trans "Обрашения" %}</a>
-						<a href="#!">{%  trans "Реестр НПА" %}</a>
-						<a href="#!">{%  trans "Интерактивные услуги" %}</a>
-						<a href="#!">{%  trans "Контакты" %}</a>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<span class="foo-top-span">{%  trans "Мы в соц.сетях:" %}</span>
-					<a class="foo-top-icon" href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-					<a class="foo-top-icon" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-					<a class="foo-top-icon" href="#!"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<footer class="footer-two">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 col-md-12">
-					<aside class="foo-two-in">
-						<a href="#!">
-							<img src="{% static 'image/home/footer.png' %}">
-						</a>
-						<a href="#!">
-							<span>{%  trans "МИНИСТЕРСТВО ВНУТРЕННИХ" %} <br> {% trans "ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН" %}</span>
-						</a>
-					</aside>
-				</div>
-				<div class="col-lg-2 col-md-6 foo-two-col">
-					<img src="{% static 'image/home/foo-phone.png' %}">
-					<div>
-						<p>{%  trans "По происшествиям" %}</p>
-						<h6>102</h6>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 foo-two-col">
-					<img src="{% static 'image/home/foo-phone.png' %}">
-					<div>
-						<p>{%  trans "Телефон доверия" %}</p>
-						<h6>1102</h6>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-12 footer-ctrl">
-					<p>{%  trans "Внимание! Если Вы нашли ошибку в тексте, выделите ее и нажмите" %}<br> Ctrl + Enter {%  trans "для уведомлениия администрации " %}</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<footer class="footer-three">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 foo-three-col">
-					<span>&copy; 2006-2019. {%  trans "Все права защищены" %}</span>
-				</div>
-				<div class="col-lg-5 foo-three-col">
-					<span>{%  trans "При использовании материалов ссылка на" %}<a href="#!"> www.mvd.uz </a>{%  trans "обязательна" %}</span>
-				</div>
-				<div class="col-lg-3 foo-three-col">
-					<span>{%  trans "Разработка сайта:" %} <a href="#!">Online Service Group</a></span>
-				</div>
-			</div>
-		</div>
-	</footer>
+
 	<section class="section-second">
 		<img id="next-icon-us" src="{% static 'image/home/next.png' %}">
 		<img id="prev-icon-us" src="{% static 'image/home/prev.png' %}">

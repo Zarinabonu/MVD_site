@@ -2,55 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa441e41-3ef0-4376-8c1b-a16087f2c35d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/api/international/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/international/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/international/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/international/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0003_international_busines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0004_auto_20190911_0818.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0005_international_busines_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/international.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/1_Ky6EStd.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/1_vnmDJYY.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/2_SmbDmRs.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/3_EdMhh2i.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/3_L5Roj7O.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/5_LRNmPGY.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/5_cYL3e9M.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/IMG_20190505_174937.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/Screenshot_20190603-221139.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/news/contact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/news/face.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/news/print.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/news/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/newsblog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/newspodrobni.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/criminal/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/criminal/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/criminal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/criminal/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/criminal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/criminal/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_auto_20190907_0549.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0003_auto_20190907_0839.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0004_auto_20190908_0023.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0005_auto_20190909_1339.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0006_auto_20190909_1340.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/criminal_static.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/criminal_static.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/locale/en/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/locale/en/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/locale/uz/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/locale/uz/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/media.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/media.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/media.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/criminal/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/criminal/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/criminal/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/criminal/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/criminal/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/criminal/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/news/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/news/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/news/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/news/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/news/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/news/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/reform/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/reform/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/reform/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/reform/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/reform/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/reform/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/block.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/block.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +61,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MCHS" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/WorkWise" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -144,7 +130,9 @@
       <workItem from="1567913366639" duration="9349000" />
       <workItem from="1568022335920" duration="417000" />
       <workItem from="1568022783043" duration="13489000" />
-      <workItem from="1568096355460" duration="21015000" />
+      <workItem from="1568096355460" duration="21832000" />
+      <workItem from="1568159681262" duration="5576000" />
+      <workItem from="1568189582576" duration="7761000" />
     </task>
     <servers />
   </component>
