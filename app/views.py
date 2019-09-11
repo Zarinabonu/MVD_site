@@ -48,7 +48,6 @@ class News_ListView(ListView):
                                              'subnew':list_news,
                                              'reforms': reform,
                                              'criminals': criminal,
-                                             'criminal_static ': criminal_static,
                                              'cities': response,
                                              'criminal_count':response2})
 
@@ -60,20 +59,18 @@ class News_Detail_ListView(TemplateView):
         context = super(News_Detail_ListView, self).get_context_data(**kwargs)
         context['internationals'] = International_busines.objects.all()
 
+
         return context
 
 
+class International_detailView(DetailView):
+    template_name = 'newspodrobni.html'
+    pk_url_kwarg = 'id'
+    model = International_busines
 
-class Criminal_static_ListView(ListView):
 
-    def get(self, request, *args, **kwargs):
 
-        response = [{'City': c, 'count': counts} for c, counts in zip(list, list2)]
 
-        print('LISTS :', response)
-
-        return render(request, 'home.html', {'reforms': reform,
-                                             'criminals': criminal})
 
 
 

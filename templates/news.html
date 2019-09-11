@@ -31,7 +31,7 @@
 									</figure>
 									<div class="nps-center"><span class="left">{{ inter.created }}</span><img src="{%  static 'image/news/eye.png' %}"><span class="right">568</span></div>
 									<p>{{ inter.title_ru }}</p>
-									<a href="#!">Подробнее</a>
+									<a href="{% url 'news-detail' inter.id%}">Подробнее</a>
 								</aside>
 							</div>
 							{% endfor %}
