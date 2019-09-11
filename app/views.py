@@ -48,7 +48,7 @@ class News_ListView(ListView):
                                              'subnew':list_news,
                                              'reforms': reform,
                                              'criminals': criminal,
-                                             'criminal_static ': criminal_static,
+                                             
                                              'cities': response,
                                              'criminal_count':response2})
 
