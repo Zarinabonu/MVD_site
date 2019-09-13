@@ -52,11 +52,11 @@
 							</div>
 						</div>
 						<h5 class="heading-h5">{{ news_detail.title_name_ru }}</h5>
-						<p>{{ news_detail.short_content_ru }}</p>
+						<p>{{ news_detail.short_content_ru | safe }}</p>
 						<figure>
-							<img class="border-rad" src="{{ news_detail.image }}">
+							<img class="border-rad" src="{{ news_detail.image.url }}">
 						</figure>
-						<p>{{ news_detail.full_content_ru }}</p>
+						<p>{{ news_detail.full_content_ru | safe }}</p>
 
 					</aside>
 				</div>

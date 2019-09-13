@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'app',
     'cms',
     'rest_framework',
+    'pure_pagination',
 ]
 
 MIDDLEWARE = [
@@ -87,7 +88,9 @@ DATABASES = {
     'default': {
 
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'mvd_adminka',
+        'USER': 'zarina',
+        'PASSWORD': '1'
 
        
     }

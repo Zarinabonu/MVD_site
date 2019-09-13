@@ -24,26 +24,13 @@ class News_ListView(ListView):
             new_type = news.filter(type=t_news)
             list_news_type.append(t_news)
             list_news.append(new_type)
-        # response_news = [{'news_type': n_type, 'news': new} for n_type, new in zip(list7, list8)]
 
         reform = Type_form.objects.all()[:4]
         criminal = Criminal.objects.all()[:5]
 
-        #static = Static_criminal.objects.all()
         region = Region.objects.all()
         criminal_type = Criminal_type.objects.all()
-        #for city in region:
-        #    s = Static_criminal.objects.filter(region=city)
-        #    c = s.aggregate(Sum('counter'))
-        #    list.append(c)
-        #    list2.append(city)
-        #response = [{'City': c, 'count': counts} for c, counts in zip(list2, list)]
 
-        #for criminals in criminal_type:
-        #    criminal_static = Static_criminal.objects.filter(criminal_type=criminals)
-        #    list3.append(criminals)
-        #    list4.append(criminal_static.count())
-        #response2 = [{'criminal_type': cri, 'criminal_count': criminal_counts} for cri, criminal_counts in zip(list3, list4)]
 
         return render(request, 'home.html', {'news_type': news_type,
                                              'subnew':list_news,
