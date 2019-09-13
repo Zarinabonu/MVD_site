@@ -2,39 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa441e41-3ef0-4376-8c1b-a16087f2c35d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/cms/international_friendship/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cms/international_friendship/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cms/international_friendship/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/criminal/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/criminal/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/criminal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/criminal/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/criminal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/criminal/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/international/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/international/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/news/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/news/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/news/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/news/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/reforms/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/reforms/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/reforms/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/reforms/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/reforms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/reforms/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_auto_20190910_1202.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0003_international_busines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0004_auto_20190911_0818.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0005_international_busines_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/international_friendship/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/international.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/international.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cms/_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cms/criminal/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/criminal/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cms/criminal/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/criminal/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cms/news/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/news/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cms/news/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/news/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cms/reform/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/reform/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cms/reform/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cms/reform/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/newsblog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newsblog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/newspodrobni.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newspodrobni.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,7 +102,7 @@
       <workItem from="1568096355460" duration="21832000" />
       <workItem from="1568159681262" duration="5576000" />
       <workItem from="1568189582576" duration="16704000" />
-      <workItem from="1568357645828" duration="16379000" />
+      <workItem from="1568357645828" duration="19239000" />
     </task>
     <servers />
   </component>
