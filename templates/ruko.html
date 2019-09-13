@@ -1,0 +1,286 @@
+{% extends 'newsblog.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     {% block css %}
+
+    {% endblock %}
+
+</head>
+<body>
+	{% block news_content %}
+
+	<main class="menu news">
+		<div class="mfa-link">
+
+			<div class="m-center">
+				<a href="#!">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+				<a href="#!">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="#!">
+					<i class="fa fa-telegram" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div class="m-right">
+				<form class="search-form">
+					<button>
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+					<input type="text" name="search" placeholder="Поиск">
+				</form>
+			</div>
+		</div>
+		<div class="m-lang-div">
+			<a href="#!">Русский</a>
+			<a href="#!">O'zbekcha</a>
+			<a href="#!">English</a>
+		</div>
+		<div class="m-logo">
+			<a href="#!">
+				<img src="image/home/logo.png">
+			</a>
+		</div>
+		<div class="main-h5">
+			<h5>МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН</h5>
+		</div>
+		<div class="menu-ul-div">
+			<ul class="menu-ul">
+				<li class="m-row-li"><a href="home.html">Главная</a></li>
+				<li class="m-row-li"><a href="#">О министерстве</a></li>
+				<li class="m-row-li"><a href="news.html">Пресс-центр</a></li>
+				<li class="m-row-li"><a href="#">Госуслуги</a></li>
+				<li class="m-row-li"><a href="#">Обращения</a></li>
+				<li class="m-row-li"><a href="#">Реестр НПА</a></li>
+				<li class="m-row-li"><a href="#">Интерактивные услуги</a></li>
+				<li class="m-row-li"><a href="#">Контакты</a></li>
+			</ul>
+		</div>
+	</main>
+	<section class="news-banner nb">
+		<div class="nb-image-div"></div>
+		<div class="banner-top">
+			<div class="ban-left">
+				<div>
+					<a href="#">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-telegram" aria-hidden="true"></i>
+					</a>
+					<a class="link-phone" href="#">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+						По происшествиям 102
+					</a>
+				</div>
+			</div>
+			<div class="ban-center">
+				<div class="ban-center-top">
+					<a href="#">
+						<img src="image/home/logo.png">
+					</a>
+				</div>
+				<div class="ban-center-bottom">
+					<h3>
+						МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН
+					</h3>
+				</div>
+			</div>
+			<div class="ban-right">
+				<div class="ban-right-inner">
+					<div>
+						<button class="dinamik ban-btn">
+							<i class="fa fa-volume-up" aria-hidden="true"></i>
+						</button>
+						<button class="mobile ban-btn">
+							<i class="fa fa-mobile" aria-hidden="true"></i>
+						</button>
+						<button class="eyes ban-btn">
+							<img src="{% static 'image/home/eyes.png' %}">
+						</button>
+					</div>
+					<form class="search-form">
+						<button>
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+						<input type="text" name="search" placeholder="Поиск">
+					</form>
+					<div class="lang">
+						<div class="lang-show">
+							<img src="{% static 'image/home/lang.png' %}">
+							<a class="lang-link" href="#">Русский</a>
+							<img src="{% static 'image/home/drop.png' %}">
+						</div>
+						<ul class="lang-hide">
+							<li><a class="lang-link-hide" href="#">English</a></li>
+							<li><a class="lang-link-hide" href="#">O'zbek</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ruko">
+		<div class="container">
+			<div class="pheading">
+				<h3>Руководство</h3>
+			</div>
+		</div>
+		<div class="container con-pad">
+			<div class="row pro-row">
+				<div class="col-xl-9">
+					<aside class="as-all ruko-left">
+						<div>
+							<img class="border-rad" src="{% static 'image/minister/min1.jpg' %}">
+						</div>
+						<div class="ruko-as-left-right">
+							<h5>Министр внутренних дел Республики Узбекистан</h5>
+							<p class="fam">Бобожонов Пулат Раззакович</p>
+							<p><span class="left">Телефон:</span> <span>0(371) 233-38-82, 231-36-50, 231-33-36, 231-32-72</span></p>
+							<p class="text"><span class="left">Дни приема: </span><span>Дни приема: Для граждан, желающих записаться на прием к Министру внутренних дел Республики Узбекистан необходимо обратиться с заявлением в Министерство внутренних дел Республики Узбекистан.</span></p>
+							<button class="button-yellow">Подробнее</button>
+						</div>
+					</aside>
+					<aside class="as-all ruko-left">
+						<div>
+							<img class="border-rad" src="{% static 'image/minister/min1.jpg' %}">
+						</div>
+						<div class="ruko-as-left-right">
+							<h5>Заместитель министра</h5>
+							<p class="fam">Жураев Мухиддин Уткирович</p>
+							<p><span class="left">Телефон:</span> <span>0(371) 233-38-82, 231-36-50, 231-33-36, 231-32-72</span></p>
+							<p class="text"><span class="left">Дни приема: </span><span>среда, 10.00-12.00 часов</span></p>
+							<button class="button-yellow">Подробнее</button>
+						</div>
+					</aside>
+					
+				</div>
+				<div class="col-xl-3">
+					<aside class="ruko-right all">
+                        <h5>О министерстве</h5>
+                        <ul>
+                            <li class=""><a href="news.html">История министерства</a></li>
+                            <li class="active"><a href="ruko.html">Руководство</a></li>
+                            <li class=""><a href="#!">Структура</a></li>
+                            <li class=""><a href="#!">Задачи, функции и права</a></li>
+                            <li class=""><a href="#!">Подразделения министерства</a></li>
+                            <li class=""><a href="#!">Подведомственные учреждение министерства</a></li>
+                            <li class=""><a href="#!">Прием на службу</a></li>
+                            <li class=""><a href="#!">Термины</a></li>
+                        </ul>
+                    </aside>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 foo-one-col">
+                    <div class="menu-foo">  
+                        <a href="#!">О министерстве</a>
+                        <a href="#!">Пресс-центр</a>
+                        <a href="#!">Госуслуги</a>
+                        <a href="#!">Обрашения</a>
+                        <a href="#!">Реестр НПА</a>
+                        <a href="#!">Интерактивные услуги</a>
+                        <a href="#!">Контакты</a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <span class="foo-top-span">Мы в соц.сетях:</span>
+                    <a class="foo-top-icon" href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a class="foo-top-icon" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a class="foo-top-icon" href="#!"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer-two">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <aside class="foo-two-in">
+                        <a href="#!">
+                            <img src="{% static 'image/home/footer.png' %}">
+                        </a>
+                        <a href="#!">
+                            <span>МИНИСТЕРСТВО ВНУТРЕННИХ<br> ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН</span>
+                        </a>
+                    </aside>
+                </div>
+                <div class="col-lg-2 col-md-6 foo-two-col">
+                    <a href="#!"><img src="{% static 'image/home/foo-phone.png' %}"></a>
+                    <div>
+                        <a class="footer-tel" href="#">
+                        	<p>По происшествиям</p>
+                        	<h6>102</h6>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 foo-two-col">
+                    <a href="#!"><img src="{% static 'image/home/foo-phone.png' %}"></a>
+                    <div>
+                    	<a class="footer-tel" href="#">
+         	               <p>Телефон доверия</p>
+            	            <h6>1102</h6>
+                    	</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12 footer-ctrl">
+                    <p>Внимание! Если Вы нашли ошибку в тексте, выделите ее и нажмите<br> Ctrl + Enter для уведомлениия администрации </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer-three">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 foo-three-col">
+                    <span>&copy; 2006-2019. Все права защищены</span>
+                </div>
+                <div class="col-lg-5 foo-three-col">
+                    <span>При использовании материалов ссылка на<a href="#!"> www.mvd.uz </a>обязательна</span>
+                </div>
+                <div class="col-lg-3 foo-three-col">
+                    <span>Разработка сайта: <a href="#!">Online Service Group</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="section-hide">
+        <div class="ctrl-enter">
+            <form>
+              <p>Muallifga xatolar bo'yicha xabar berish:</p>
+              <hr>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Matn xato bilan:</label>
+                <textarea id="text-area-xato" class="form-control" rows="4" cols="36"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Sizning izoxingiz yoki to`g`ri versiya:</label>
+                <textarea id="text-area-right" class="form-control" rows="4" cols="36"></textarea>
+              </div>
+              <div class="ctrl-btn">
+                <button class="btn-bekor" type="button">Bekor qilish</button>
+                <button type="submit">Jo'natish</button>
+              </div>
+            </form>
+        </div>
+    </section>
+	<script type="text/javascript" src="{% static 'lib/jquery/jquery-3.4.1.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'lib/jquery/popper.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'lib/Owl/dist/owl.carousel.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+{% endblock %}
+</body>
+</html>
+

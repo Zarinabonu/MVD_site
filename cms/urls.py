@@ -18,5 +18,8 @@ urlpatterns = [
     path('criminal/create', views.Criminal_CreateView.as_view(), name='criminal-create'),
     path('login', views.LogIn.as_view(), name='login'),
     path('logout', views.Logout.as_view(), name='logout'),
+    path('ifriend/list', views.Inter_friendship_ListView.as_view(), name='inter-friend-list'),
+    path('ifriend/create', views.Inter_friend_CreateView.as_view(), name='inter-friend-create'),
+    path('ifiend/update/<int:id>', views.Inter_friend_UpdateView.as_view(), name='inter-friend-update'),
 
 ]

@@ -1,3 +1,4 @@
+
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
@@ -6,7 +7,7 @@ from django.urls import reverse
 from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, CreateView
 
-from app.model import News, Type_news, Forms, Type_form, Criminal
+from app.model import News, Type_news, Forms, Type_form, Criminal, International_busines
 
 
 class Admin(LoginRequiredMixin,View):
@@ -19,14 +20,14 @@ class News_ListView(LoginRequiredMixin, ListView):
     # model = News
     # context_object_name = 'news'
     def get(self, request, *args, **kwargs):
-        news = News.objects.all()[:4]
+        news = News.objects.all()
         return render(request, 'cms/news/list.html', {'news': news})
 
 
 class News_CreateView(View):
 
     def get(self, request, *args, **kwargs):
-        news = News.objects.all()[:4]
+        news = News.objects.all()
         types = Type_news.objects.all()
         return render(request, 'cms/news/create.html', {'news': news,
                                                         'type': types})
@@ -37,6 +38,17 @@ class News_UpdateView(DetailView):
     model = News
     context_object_name = 'update_news'
     pk_url_kwarg = 'id'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['type'] = Type_news.objects.all()
+        return context
+
+    # def get(self, request, *args, **kwargs):
+    #     news = News.objects.all()[:4]
+    #     types = Type_news.objects.all()
+    #     return render(request, 'cms/news/update.html', {'type': types})
+
 
 
 class Reform_ListView(LoginRequiredMixin, ListView):
@@ -82,9 +94,26 @@ class Criminal_UpdateView(DetailView):
     pk_url_kwarg = 'id'
 
 
+
+
 class Criminal_CreateView(TemplateView):
     template_name = 'cms/criminal/create.html'
 
+
+class Inter_friendship_ListView(LoginRequiredMixin, ListView):
+    template_name = 'cms/international_friendship/list.html'
+    queryset = International_busines.objects.all()
+    context_object_name = 'inter_friendships'
+
+class Inter_friend_CreateView(TemplateView):
+    template_name = 'cms/international_friendship/create.html'
+
+
+class Inter_friend_UpdateView(DetailView):
+    model = International_busines
+    context_object_name = 'ifriend'
+    template_name = 'cms/international_friendship/update.html'
+    pk_url_kwarg = 'id'
 
 class LogIn(View):
     def get(self, request):

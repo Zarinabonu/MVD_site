@@ -51,11 +51,12 @@
 								</button>
 							</div>
 						</div>
-						<h5 class="heading-h5">{{ news_detail.title_ru }}</h5>
+						<h5 class="heading-h5">{{ news_detail.title_name_ru }}</h5>
+						<p>{{ news_detail.short_content_ru }}</p>
 						<figure>
-							<img class="border-rad" src={{ news_detail.image.url }}>
+							<img class="border-rad" src="{{ news_detail.image }}">
 						</figure>
-						<p>{{ news_detail.description_ru }}</p>
+						<p>{{ news_detail.full_content_ru }}</p>
 
 					</aside>
 				</div>

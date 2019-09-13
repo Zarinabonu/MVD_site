@@ -1,0 +1,106 @@
+{% extends 'cms/_base.html' %}
+{% load static %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-main__title">
+                            <h2>Наши сотрудники</h2>
+                        </div>
+                        <a href="{% url 'inter-friend-create' %}" type="button" class="btn btn-info m-t-10 float-right">Добавить</a>
+                        <!-- Add Contact Popup Model -->
+                        <div class="table-responsive">
+                            <table id="demo-foo-addrow" class="table table-bordered m-t-30 table-hover contact-list" data-paging="true" data-paging-size="7">
+                                <thead>
+                                    <tr>
+                                        <th width="1%">#</th>
+                                        <th width=1%></th>
+                                        <th width="100">Имя</th>
+                                        <th width="50">Должность</th>
+                                        <th width="1%"></th>
+                                        <th width="1%">Статус</th>
+                                        <th width="1%"></th>
+                                    </tr>
+                                <tbody>
+
+                                    {% for i_friend in inter_friendships %}
+                                        <tr>
+                                            <td>{{ i_friend.id }}</td>
+                                            <td>
+
+                                                {% if i_friend.image %}
+                                                <img src="{{ i_friend.image.url }}" alt="user" width="30" class="" />
+                                                {% endif %}
+
+
+                                            </td>
+                                            <td>
+                                                <span>{{ i_friend.title_name_ru }}</span>
+                                            </td>
+
+                                            <td><a href="{% url 'inter-friend-update' i_friend.id %}" class="label label-info"><i class="fas fa-edit"></i> Ред-ть</a></td>
+
+
+                                            <td><a href="#" class="deleteButton label label-danger" data-url="{% url 'api-international-delete' i_friend.id %}" ><i class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                    {% endfor %}
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End PAge Content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(document).ready(function () {
+            $(".deleteButton").click(function (e) {
+                e.preventDefault();
+
+                var conf = confirm('Вы действительно хотите удалить запись?');
+
+                var url = $(this).data("url");
+
+                if(conf){
+                    console.log(conf);
+                    $.ajax({
+                        headers: { "X-CSRFToken": "{{csrf_token}}" },
+                        url: url,
+                        processData: false,
+                        method: 'DELETE',
+                        success: function (data) {
+                            location.reload();
+                        },
+                        error: function (data) {
+                            alert("Error");
+                        }
+                    });
+                }
+
+
+            });
+        });
+    </script>
+{% endblock %}

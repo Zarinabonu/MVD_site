@@ -1,7 +1,7 @@
 from rest_framework.generics import CreateAPIView, UpdateAPIView, DestroyAPIView, ListAPIView
 from app.model import Forms
 
-from app.api.criminal.serializers import CriminalSerializer, CriminalListSerializer, Static_criminalSerialzier
+from app.api.criminal.serializers import CriminalSerializer, Criminal_typeSerializer, RegionSerializer
 from app.model import Criminal
 from app.model.criminal_static import  Criminal_type, Region
 
@@ -27,11 +27,26 @@ class CriminalDeleteAPIView(DestroyAPIView):
         return self.destroy(request, *args, **kwargs)
 
 
-class CriminalListAPIView(ListAPIView):
-    queryset = Criminal.objects.all()
-    serializer_class = CriminalListSerializer
+class Criminal_typeCreateAPIView(CreateAPIView):
+    queryset = Criminal_type. objects.all()
+    serializer_class = Criminal_typeSerializer
 
 
-class Criminal_staticCreateAPIView(CreateAPIView):
-    queryset = None
-    serializer_class = Static_criminalSerialzier
+class Criminal_typeUpdateAPIView(UpdateAPIView):
+    queryset = Criminal_type. objects.all()
+    serializer_class = Criminal_typeSerializer
+    lookup_url_kwarg = 'id'
+
+
+class Criminal_typeDeleteAPIView(DestroyAPIView):
+    queryset = Criminal_type. objects.all()
+    serializer_class = Criminal_typeSerializer
+    lookup_url_kwarg = 'id'
+
+
+class RegionUpdateAPIView(UpdateAPIView):
+    queryset = Region. objects.all()
+    serializer_class = RegionSerializer
+    lookup_url_kwarg = 'id'
+
+

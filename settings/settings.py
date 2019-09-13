@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'nb22)3(z+8n9$33ncp1bt*up6neaizqky)8-o&2hb9kjqdc6*$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -86,9 +86,9 @@ WSGI_APPLICATION = 'wsgi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mvdsite',
-        'USER': 'mvduser',
-        'PASSWORD': '12345',
+        'NAME': 'mvd_adminka',
+        'USER': 'zarina',
+        'PASSWORD': '1',
     }
 }
 

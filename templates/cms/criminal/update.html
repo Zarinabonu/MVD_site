@@ -20,42 +20,62 @@
                         <form action="">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Русский</span></a> </li>
-                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">English</span></a> </li>
                                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#messages" role="tab"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Узбекча</span></a> </li>
                             </ul>
                             <!-- Tab panes -->
-                            <div class="tab-content tabcontent-border">
+
+                           <div class="tab-content tabcontent-border">
                                 <div class="tab-pane active" id="home" role="tabpanel">
                                     <div class="p-20">
+
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-md-3 text-right">
-                                                    <label for="name_ru" class="control-label">Имя (ru)</label>
+                                                    <label for="short_content_ru" class="control-label">Короткое содержание (ru)</label>
                                                 </div>
                                                 <div class="col-md-9">
-                                                    <input type="text" id="name_ru" class="form-control" value="{{criminal.description_name_ru}}" name="description_name_ru" placeholder="" autocomplete="off">
+                                                    <textarea type="text" id="short_content_ru"  class="moxiecut form-control" name="short_content_ru">{{criminal.short_content_ru}}</textarea>
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-3 text-right">
+                                                    <label for="full_content_ru" class="control-label">Полное содержание (ru)</label>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <textarea type="text" id="full_content_ru" class="moxiecut form-control" name="full_content_ru">{{criminal.full_content_ru}}</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="tab-pane p-20" id="messages" role="tabpanel">
+
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-3 text-right">
-                                                <label for="name_uz" class="control-label">Имя (uz)</label>
+                                                <label for="short_content_uz" class="control-label">Короткое содержание (uz)</label>
                                             </div>
                                             <div class="col-md-9">
-                                                <input type="text" id="name_uz" class="form-control" value="{{criminal.description_name_uz}}" name="name_uz" placeholder="" autocomplete="off">
+                                                <textarea type="text" id="short_content_uz" class="moxiecut form-control" name="short_content_uz">{{criminal.short_content_uz}}</textarea>
                                             </div>
                                         </div>
                                     </div>
-
-
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3 text-right">
+                                                <label for="full_content_uz" class="control-label">Полное содержание (uz)</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <textarea type="text" id="full_content_uz" class="moxiecut form-control" name="full_content_uz">{{criminal.full_content_uz}}</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="p-20">
 
                                 <div class="form-group">
@@ -148,9 +168,20 @@
         $(document).ready(function () {
             $("#updateButton").click(function (e) {
                 e.preventDefault();
+
+                var shortContentRu = tinymce.get('short_content_ru').getContent();
+                var shortContentUz = tinymce.get('short_content_uz').getContent();
+                var fullContentRu = tinymce.get('full_content_ru').getContent();
+                var fullContentUz = tinymce.get('full_content_uz').getContent();
+
+
                 let formData = new FormData();
 
-                formData.append('description_name_ru', $('input[name="description_name_ru"]').val());
+                formData.append('short_content_ru', shortContentRu);
+                formData.append('full_content_ru', fullContentRu);
+
+                formData.append('short_content_uz', shortContentUz);
+                formData.append('full_content_uz', fullContentUz);
 
                 for (let i = 0; i < $('#kv-explorer')[0].files.length; i++){
                     formData.append('image', $('#kv-explorer')[0].files[i]);
@@ -164,7 +195,7 @@
                     method: 'PUT',
                     data: formData,
                     success: function (data) {
-                        {#window.location.href = '/adminka/criminal/list';#}
+                         window.location.href = '/cms/news/list';
                     },
                     error: function (data) {
                         alert('Error');
