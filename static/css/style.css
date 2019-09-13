@@ -593,9 +593,12 @@ div.peres-flex-in {
 }
 div.peres-flex-in div.left {
 	margin-right: 16px;
+	width: 75px;
+	text-align: center;
 }
 div.peres-flex-in p {
 	font-weight: 600;
+	width: 130px;
 }
 /*------------peres------------*/
 /*============map==============*/
@@ -830,6 +833,9 @@ footer.footer-three a {
 }
 footer.footer-three a:hover {
 	color: #edd290;
+}
+a.footer-tel {
+	color: #3f3f3f;
 }
 /*-----------footer------------*/
 /*=========section second======*/

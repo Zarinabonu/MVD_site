@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from bot.tergov.uz/admin/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Feb 2019 08:35:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Вход в систему</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/admin/images/favicon.html' %}">
+<meta name="author" content="Online Service Group - osg.uz" /> 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/auth/vendor/bootstrap/css/bootstrap.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/auth/fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/auth/vendor/animate/animate.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/auth/vendor/css-hamburgers/hamburgers.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/auth/vendor/select2/select2.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/auth/css/util.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/auth/css/main424d.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/auth/css/responsive424d.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,700i" rel="stylesheet">
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="{% static 'assets/auth/images/login0.png'%}" alt="IMG">
+				</div>
+
+                <form class="form-horizontal form-material login100-form validate-form" id="loginform" method="post" action="">
+					<span class="login100-form-title">
+						Вход в систему
+					</span>
+                                    {% csrf_token %}
+					<div class="wrap-input100 validate-input" data-validate = "Login maydoni majburiy">
+						<input class="input100" type="text" name="username" placeholder="Логин">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Parol maydoni majburiy">
+						<input class="input100" type="password" name="password" placeholder="Пароль">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button  class="login100-form-btn">
+							Войти
+						</button>
+					</div>
+
+					<div class="text-center p-t-12" style="display: none;">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>
+                    
+                    
+					<!--<div class="text-center p-t-136">
+						<a class="txt2" href="#" style="display: none;">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>-->
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+	<script src="{% static 'assets/auth/vendor/jquery/jquery-3.2.1.min.js'%}"></script>
+<!--	<script src="https://bot.tergov.uz/admin/assets/auth/vendor/bootstrap/js/popper.js"></script>-->
+	<script src="{% static 'assets/auth/vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+	<script src="{% static 'assets/auth/vendor/select2/select2.min.js'%}"></script>
+	<script src="{% static 'assets/auth/vendor/tilt/tilt.jquery.min.js'%}"></script>
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		});
+	</script>
+	<script src="{% static 'assets/auth/js/main.js'%}"></script>
+</body>
+
+<!-- Mirrored from bot.tergov.uz/admin/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Feb 2019 08:35:42 GMT -->
+</html>

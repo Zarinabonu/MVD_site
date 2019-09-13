@@ -16,5 +16,7 @@ urlpatterns = [
     path('criminal/list', views.Criminal_ListView.as_view(), name='criminal-list'),
     path('criminal/update/<int:id>', views.Criminal_UpdateView.as_view(), name='crimanl-update'),
     path('criminal/create', views.Criminal_CreateView.as_view(), name='criminal-create'),
+    path('login', views.LogIn.as_view(), name='login'),
+    path('logout', views.Logout.as_view(), name='logout'),
 
 ]

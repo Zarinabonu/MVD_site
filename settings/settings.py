@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+
+from django.urls import reverse_lazy
 from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -131,7 +133,7 @@ LANGUAGES = (
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'conf'),
 )
-
+LOGIN_URL = reverse_lazy('login')
 # LOCALE_PATHS = (
 #     os.path.join(PROJECT_PATH, '../locale'),
 # )

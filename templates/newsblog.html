@@ -27,7 +27,7 @@
 					<a href="#">
 						<i class="fa fa-telegram" aria-hidden="true"></i>
 					</a>
-					<a class="link-phone" href="#">
+					<a class="link-phone" href="tel:102">
 						<i class="fa fa-phone" aria-hidden="true"></i>
 						По происшествиям 102
 					</a>
@@ -36,7 +36,7 @@
 			<div class="ban-center">
 				<div class="ban-center-top">
 					<a href="#">
-						<img src="image/home/logo.png">
+						<img src="{% static 'image/home/logo.png' %}">
 					</a>
 				</div>
 				<div class="ban-center-bottom">
@@ -55,7 +55,7 @@
 							<i class="fa fa-mobile" aria-hidden="true"></i>
 						</button>
 						<button class="eyes ban-btn">
-							<img src="image/home/eyes.png">
+							<img src="{% static 'image/home/eyes.png' %}">
 						</button>
 					</div>
 					<form class="search-form">
@@ -66,9 +66,9 @@
 					</form>
 					<div class="lang">
 						<div class="lang-show">
-							<img src="image/home/lang.png">
+							<img src="{% static 'image/home/lang.png' %}">
 							<a class="lang-link" href="#">Русский</a>
-							<img src="image/home/drop.png">
+							<img src="{% static 'image/home/drop.png' %}">
 						</div>
 						<ul class="lang-hide">
 							<li><a class="lang-link-hide" href="#">English</a></li>
@@ -81,7 +81,7 @@
 	</section>
 {% block news_content %}
 {% endblock %}
-
+{% comment %} 
 	<section class="ns">
 		<div class="news-heading">
 			<h3 class="news-head">Международное сотрудничество</h3>
@@ -105,7 +105,7 @@
 			</div>
 
 		</div>
-	</section>
+	</section> {% endcomment %}
 
 	<section class="section-hide">
 		<div class="ctrl-enter">

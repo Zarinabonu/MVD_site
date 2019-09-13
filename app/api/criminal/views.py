@@ -3,7 +3,7 @@ from app.model import Forms
 
 from app.api.criminal.serializers import CriminalSerializer, CriminalListSerializer, Static_criminalSerialzier
 from app.model import Criminal
-from app.model.criminal_static import Static_criminal, Criminal_type, Region
+from app.model.criminal_static import  Criminal_type, Region
 
 
 class CriminalNewsCreateAPIView(CreateAPIView):
@@ -33,5 +33,5 @@ class CriminalListAPIView(ListAPIView):
 
 
 class Criminal_staticCreateAPIView(CreateAPIView):
-    queryset = Static_criminal.objects.all()
+    queryset = None
     serializer_class = Static_criminalSerialzier

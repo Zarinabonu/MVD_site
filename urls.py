@@ -28,6 +28,7 @@ urlpatterns = [
     path('api/', include('app.api.urls')),
     path('admin/', admin.site.urls),
     path('news', views.News_Detail_ListView.as_view(), name='news'),
+    path('news/detail<int:id>', views.International_detailView.as_view(), name='news-detail'),
 
 ]
 

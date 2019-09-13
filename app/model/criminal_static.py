@@ -4,6 +4,7 @@ from django.db import models
 class Region(models.Model):
     name_uz = models.CharField(max_length=100, blank=True, null=True)
     name_ru = models.CharField(max_length=100, blank=True, null=True)
+    count = models.IntegerField(default=0)
 
     class Meta:
         ordering = ('-id',)
@@ -16,6 +17,8 @@ class Region(models.Model):
 class Criminal_type(models.Model):
     name_uz = models.CharField(max_length=100, blank=True, null=True)
     name_ru = models.CharField(max_length=100, blank=True, null=True)
+    icon = models.ImageField(upload_to='media', null=True, blank=True)
+    count = models.IntegerField(default=0)
 
     class Meta:
         ordering = ('-id',)
@@ -25,7 +28,6 @@ class Criminal_type(models.Model):
         return self.name_ru
 
 
-class Static_criminal(models.Model):
-    region = models.ManyToManyField('Region')
-    criminal_type = models.ForeignKey('Criminal_type', null=True, blank=True, on_delete=models.DO_NOTHING)
-    counter = models.IntegerField(null=True, blank=True)
+#class Static_criminal(models.Model):
+#    region = models.ManyToManyField('Region')
+#    counter = models.IntegerField(default=0)

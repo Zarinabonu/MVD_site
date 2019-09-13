@@ -1,0 +1,9 @@
+@media (max-width: 1200px){
+   .wrap-login100{width: 720px;}
+}
+@media (max-width: 768px){
+  .login100-pic{display:none;}
+  .login100-form {
+    width: 100%;
+}
+}

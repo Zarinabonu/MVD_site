@@ -206,7 +206,7 @@
 		overflow: hidden;
 	}
 	aside.nrs-left {
-		padding: 20px 15px 0;
+		padding: 20px 15px 20px;
 	}
 	aside.nrs-top {
 		display: none;
@@ -420,7 +420,7 @@
 		height: 152px;
 	}
 	aside.nrs-left {
-		padding: 35px 40px 0;
+		padding: 35px 40px 20px;
 	}
 
 }

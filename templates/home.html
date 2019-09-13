@@ -181,13 +181,15 @@
 				<div class="col-lg-6">
 					<div class="news-inner">
 						<h5>{{ type }}</h5>
-						<div class="news-item">
-                            {% for news in type.news_set.all %}
-							<button class="button-yellow">{{ news.created}}</button>
+					                            {% for news in type.news_set.all %}
+								    	<div class="news-item">
+
+							<button class="button-yellow">{{ news.created|date:"d m Y"}}</button>
 							<p>{{ news.title_name_ru }}</p>
 							<a class="readmore" href="#">{% trans "Подробнее" %}</a>
+	</div>
                             {% endfor %}
-						</div>
+					
 
 
 					</div>
@@ -309,7 +311,7 @@
 								<img src={{ reform.image.url }}>
 							</div>
 							<div class="re-right">
-								<button class="button-yellow">{{ reform.created}}</button>
+								<button class="button-yellow">{{ reform.created|date:"d m Y"}}</button>
 								<a href="#">
 									<p>{{ reform.title_name_ru }}</p>
 								</a>
@@ -372,7 +374,7 @@
 		</div>
 		<div class="container con-pad">
 			<div class="row">
-				{% for criminal in criminals %}
+				{% for criminal in incidents %}
 				<div class="col-lg-3 col-sm-6">
 					<aside class="prois-in">
 						<figure>
@@ -402,8 +404,8 @@
 					<ul class="peres-ul">
                         {% for c in cities %}
 						<li>
-							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {{ c.City }}</span>
-							         <span>{{ c.count.counter__sum }}</span>
+							<span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {{ c.name_ru }}</span>
+							         <span>{{ c.count }}</span>
 						</li>
                         {% endfor %}
 
@@ -412,14 +414,14 @@
 				</div>
 				<div class="col-lg-8 peres-right">
 					<div class="peres-flex">
-                        {% for criminal_ in criminal_count %}
+                        {% for criminal_ in criminals %}
 						<div class="peres-flex-in">
 							<div class="left">
-								<img src="{{ criminal_.imgae.url }}">
+								<img src="{{ criminal_.icon.url }}">
 							</div>
 							<div>
-								<h1>{{ criminal_.criminal_count }}</h1>
-								<p>{{ criminal_.criminal_type}}</p>
+								<h1>{{ criminal_.count }}</h1>
+								<p>{{ criminal_.name_ru}}</p>
 							</div>
 						</div>
                         {% endfor %}
