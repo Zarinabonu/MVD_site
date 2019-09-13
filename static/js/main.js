@@ -63,8 +63,9 @@ $(document).ready(function() {
 	owl.owlCarousel({
 	    loop:true,
 	    margin:15,
+	  
 	    autoplay:false,
-	    autoplayTimeout:1000,
+	    autoplayTimeout:2500,
 	    autoplayHoverPause:true,
 	    responsive:{
 	        0:{
@@ -80,7 +81,8 @@ $(document).ready(function() {
 	            items:4
 	        },
 	        1200:{
-	            items:5
+	            items:5,
+	            center:true,
 	        }
 	    }
 	});
@@ -160,3 +162,15 @@ $(document).ready(function() {
 		$('section.full-menu').fadeToggle('fast')
 	})
 })
+
+$(document).ready(function() {
+	$('button.press-btn').click(function() {
+		$('ul.press-ul').animate({
+			height:'toggle'
+		})
+
+		$(this).children(".fa").toggleClass('arrow-reverse')
+
+	})
+})
+

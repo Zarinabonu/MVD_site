@@ -1,7 +1,7 @@
 from rest_framework.generics import CreateAPIView, UpdateAPIView, DestroyAPIView, ListAPIView
 
-from app.api.news.serializers import NewsSerialzier, NewsListSerialzier, NewsCreateSerialzier
-from app.model import News
+from app.api.news.serializers import NewsSerialzier, NewsCreateSerialzier, Type_newsSerialzier
+from app.model import News, Type_news
 
 
 class NewsCreateAPIView(CreateAPIView):
@@ -23,4 +23,21 @@ class NewsDeleteAPIView(DestroyAPIView):
 
 class NewsListAPIView(ListAPIView):
     queryset = News. objects.all()
-    serializer_class = NewsListSerialzier
+    serializer_class = NewsSerialzier
+
+
+class News_typeCreateAPIView(CreateAPIView):
+    queryset = Type_news. objects.all()
+    serializer_class = Type_newsSerialzier
+
+
+class News_typeUpdateAPIView(UpdateAPIView):
+    queryset = Type_news. objects.all()
+    serializer_class = Type_newsSerialzier
+    lookup_url_kwarg = 'id'
+
+
+class News_typeDeleteAPIView(DestroyAPIView):
+    queryset = Type_news. objects.all()
+    serializer_class = Type_newsSerialzier
+    lookup_url_kwarg = 'id'

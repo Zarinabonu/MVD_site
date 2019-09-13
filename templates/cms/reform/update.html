@@ -20,11 +20,10 @@
                         <form action="">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Русский</span></a> </li>
-                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">English</span></a> </li>
                                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#messages" role="tab"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Узбекча</span></a> </li>
                             </ul>
                             <!-- Tab panes -->
-                            <div class="tab-content tabcontent-border">
+                        <div class="tab-content tabcontent-border">
                                 <div class="tab-pane active" id="home" role="tabpanel">
                                     <div class="p-20">
                                         <div class="form-group">
@@ -33,26 +32,33 @@
                                                     <label for="title_ru" class="control-label">Загаловок (ru)</label>
                                                 </div>
                                                 <div class="col-md-9">
-                                                    <input type="text" id="title_ru" class="form-control" value="{{reform.title_name_ru}}" name="title_name_ru" placeholder="" autocomplete="off">
+                                                    <input type="text" id="title_ru" value="{{reform.title_name_ru}}" class="form-control" name="title_name_ru" placeholder="" autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>
-                          
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-md-3 text-right">
-                                                    <label for="content_ru" class="control-label">Полное содержание (ru)</label>
+                                                    <label for="short_content_ru" class="control-label">Короткое содержание (ru)</label>
                                                 </div>
                                                 <div class="col-md-9">
-                                                    <input type="text" id="content_ru" class="moxiecut form-control" name="description_name_ru" value="{{reform.description_name_ru}}" />
+                                                    <textarea type="text" id="short_content_ru" class="moxiecut form-control" name="short_content_ru">{{reform.short_content_ru}}</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-3 text-right">
+                                                    <label for="full_content_ru" class="control-label">Полное содержание (ru)</label>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <textarea type="text" id="full_content_ru" class="moxiecut form-control" name="full_content_ru">{{reform.full_content_ru}}</textarea>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane  p-20" id="profile" role="tabpanel">
-                                    
-                                </div>
+
                                 <div class="tab-pane p-20" id="messages" role="tabpanel">
                                     <div class="form-group">
                                         <div class="row">
@@ -60,18 +66,37 @@
                                                 <label for="title_uz" class="control-label">Загаловок (uz)</label>
                                             </div>
                                             <div class="col-md-9">
-                                                <input type="text" id="title_uz" class="form-control" name="title_name_uz" placeholder="" autocomplete="off" value="{{reform.title_name_uz}}">
+                                                <input type="text" id="title_uz" class="form-control" value="{{reform.title_name_uz}}" name="title_name_uz" placeholder="" autocomplete="off">
                                             </div>
                                         </div>
                                     </div>
-
-
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3 text-right">
+                                                <label for="short_content_uz" class="control-label">Короткое содержание (uz)</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <textarea type="text" id="short_content_uz" class="moxiecut form-control" name="short_content_uz">{{reform.short_content_uz}}</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3 text-right">
+                                                <label for="full_content_uz" class="control-label">Полное содержание (uz)</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <textarea type="text" id="full_content_uz" class="moxiecut form-control" name="full_content_uz">{{reform.full_content_uz}}</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="p-20">
-                                <select id="type2">
+                                <select id="type2" name="type">
                                             {% for t in type %}
-                                                <option name="type">{{ t }}</option>
+                                                <option value="{{ t.id }}" name="type">{{ t }}</option>
                                             {% endfor %}
                                          </select>                                
                                      </div>
@@ -82,7 +107,7 @@
                                         </div>
                                         <div class="col-md-9">
                                             <div class="file-loading">
-                                                <input id="kv-explorer" type="file" name="image">
+                                                <input value="{{reform.image.url}}" id="kv-explorer" type="file" name="image">
                                             </div>
                                         </div>
                                     </div>
@@ -165,9 +190,25 @@
         $(document).ready(function () {
             $("#updateButton").click(function (e) {
                 e.preventDefault();
+
+                var shortContentRu = tinymce.get('short_content_ru').getContent();
+                var shortContentUz = tinymce.get('short_content_uz').getContent();
+                var fullContentRu = tinymce.get('full_content_ru').getContent();
+                var fullContentUz = tinymce.get('full_content_uz').getContent();
+
+
                 let formData = new FormData();
+
                 formData.append('title_name_ru', $('input[name="title_name_ru"]').val());
-                formData.append('description_name_ru', $('input[name="description_name_ru"]').val());
+                formData.append('short_content_ru', shortContentRu);
+                formData.append('full_content_ru', fullContentRu);
+
+                formData.append('title_name_uz', $('input[name="title_name_uz"]').val());
+                formData.append('short_content_uz', shortContentUz);
+                formData.append('full_content_uz', fullContentUz);
+
+
+                formData.append('type', $('select[name="type"]').val());
                 for (let i = 0; i < $('#kv-explorer')[0].files.length; i++){
                     formData.append('image', $('#kv-explorer')[0].files[i]);
                 }
@@ -180,7 +221,7 @@
                     method: 'PUT',
                     data: formData,
                     success: function (data) {
-                        window.location.href = '#';
+                        window.location.href = '/cms/reform';
                     },
                     error: function (data) {
                         alert('Error');

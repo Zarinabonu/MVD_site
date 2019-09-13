@@ -71,8 +71,10 @@ class Type_form(models.Model):
 class News(models.Model):
     title_name_uz = models.CharField(max_length=255, null=True, blank=True)
     title_name_ru = models.CharField(max_length=255, null=True, blank=True)
-    description_name_uz = models.TextField(null=True, blank=True)
-    description_name_ru = models.TextField(null=True, blank=True)
+    full_content_uz = models.TextField(null=True, blank=True)
+    full_content_ru = models.TextField(null=True, blank=True)
+    short_content_ru = models.TextField(null=True, blank=True)
+    short_content_uz = models.TextField(null=True, blank=True)
     created = models.DateField(auto_now_add=True)
     type = models.ForeignKey('Type_news', on_delete=models.CASCADE, null=True, blank=True)
 
@@ -80,19 +82,22 @@ class News(models.Model):
 class Forms(models.Model):
     title_name_uz = models.CharField(max_length=255, null=True, blank=True)
     title_name_ru = models.CharField(max_length=255, null=True, blank=True)
-    description_name_uz = models.TextField(null=True, blank=True)
-    description_name_ru = models.TextField(null=True, blank=True)
+    full_content_uz = models.TextField(null=True, blank=True)
+    full_content_ru = models.TextField(null=True, blank=True)
+    short_content_ru = models.TextField(null=True, blank=True)
+    short_content_uz = models.TextField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     created = models.DateField(auto_now_add=True)
     type = models.ForeignKey('Type_form', on_delete=models.CASCADE)
 
 
 class Criminal(models.Model):
-    description_name_uz = models.TextField(null=True, blank=True)
-    description_name_ru = models.TextField(null=True, blank=True)
+    full_content_uz = models.TextField(null=True, blank=True)
+    full_content_ru = models.TextField(null=True, blank=True)
+    short_content_ru = models.TextField(null=True, blank=True)
+    short_content_uz = models.TextField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     created = models.DateField(auto_now_add=True)
-    type = models.ForeignKey('Criminal_type', on_delete=models.CASCADE)
 
 
 
