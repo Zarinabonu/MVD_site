@@ -294,7 +294,7 @@ div.banner-praz {
 div.banner-top {
 	position: absolute;
 	width: 100%;
-	top: 0;
+	top: 60px;
 	left: 0;
 	display: flex;
 	justify-content: space-between;
