@@ -324,7 +324,7 @@ div.banner-praz {
 div.banner-top {
 	position: absolute;
 	width: 100%;
-	top: 0;
+	top: 60px;
 	left: 0;
 	display: flex;
 	justify-content: space-between;
@@ -1361,3 +1361,51 @@ div.ruko-as-left-right p {
 	margin: 10px 0;
 }
 /*---------------------------------------------------minister ruko---------------------------------------------------------*/
+/*===================================================press foto video============================================================*/
+figure.figure-foto img {
+	border-radius: 6px;
+}
+aside.foto-right {
+	margin-top: 7.5px;
+}
+div.foto-con {
+	margin-top: 10px;
+}
+figure.figure-video video {
+	width: 100%;
+}
+figure.figure-video {
+	position: relative;
+}
+div.vid-before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(transparent, #211c12)
+}
+div.vid-before i.fa {
+	color: #fff;
+	font-size: 36px;
+}
+p.vid-text {
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	padding: 5px 5px 5px 10px;
+	font-size: 14px;
+	line-height: normal;
+}
+video {
+	vertical-align: middle;
+}
+/*---------------------------------------------------press foto video--------------------------------------------------*/
+/*===================================================gos===============================================================*/
+section.gos div.pheading h3 {
+	text-align: left;
+}
+
+/*---------------------------------------------------gos---------------------------------------------------------------*/
