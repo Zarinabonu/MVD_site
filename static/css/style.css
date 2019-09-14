@@ -91,6 +91,36 @@ ul.nav-ul {
 li.row-li a {
 	color: #fff;
 }
+li.row-li i.fa {
+	color: #fff;
+	transition: 0.3s;
+	margin-left: 4px;
+}
+li.row-li ul.pad-menu {
+	position: absolute;
+	z-index: 3;
+	background-color: #211c12;
+	border-radius: 5px;
+	border: 1px solid #edd290;
+	top: 110px;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+li.row-li:hover ul.pad-menu {
+	top: 56px;
+	opacity: 1;
+	visibility: visible;
+}
+li.row-li:hover i.fa {
+	transform: rotate(180deg);
+	transition: 0.3s;
+}
+ul.pad-menu li {
+	padding: 2px 12px;
+}
 li.row-li a.active {
 	color: #edd290;
 }
@@ -302,7 +332,7 @@ div.banner-top {
 }
 div.banner-top a {
 	color: #fff;
-	margin-left: 8px;
+	margin-left: 12px;
 }
 div.banner-top a i.fa {
 
@@ -379,7 +409,6 @@ ul.lang-hide li {
 div.lang-show i.fa {
 	color: #fff;
 	transition: 0.3s;
-	font-size: 14px;
 }
 div.lang:hover ul.lang-hide {
 	top: 24px;

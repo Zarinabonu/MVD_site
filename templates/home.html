@@ -9,7 +9,9 @@
     {% endblock %}
 </head>
 <body>
-{% block content %}<main class="menu">
+{% block content %}
+
+<main class="menu home">
 		<div class="mfa-link">
 			<div class="m-left">
 				<a href="#!">
@@ -119,13 +121,13 @@
 				<div class="col-lg-6">
 					<div class="news-inner">
 						<h5>{{ type }}</h5>
-					                            {% for news in type.news_set.all %}
-								    	<div class="news-item">
+                            {% for news in type.news_set.all %}
+                                <div class="news-item">
 
-							<button class="button-yellow">{{ news.created|date:"d m Y"}}</button>
-							<p>{{ news.title_name_ru }}</p>
-							<a class="readmore" href="#">{% trans "Подробнее" %}</a>
-	</div>
+                                    <button class="button-yellow">{{ news.created|date:"d m Y"}}</button>
+                                    <p>{{ news.title_name_ru }}</p>
+                                    <a class="readmore" href="#">{% trans "Подробнее" %}</a>
+	                            </div>
                             {% endfor %}
 					
 
@@ -145,12 +147,12 @@
 		<div class="uslugi-back">
 			<img src="{% static 'image/home/uslugi-back1.jpg' %}">
 		</div>
-		<div class="container uslugi-con">
+		<div class="container uslugi-con con-row">
 			<div class="owl-carousel owl-theme">
 			    <div class="item">
 			    	<aside class="uslugi-in">
 			    		<div class="us-icon-div">
-			    			<img src="{% static 'image/home/uslugi1.png' %}">
+			    			<span class="icon-document"></span>
 			    		</div>
 			    		<p>{% trans "Запись на приём к" %}<br> {% trans "руководству" %}</p>
 			    	</aside>
@@ -158,7 +160,7 @@
 			    <div class="item">
 			    	<aside class="uslugi-in">
 			    		<div class="us-icon-div">
-			    			<img src="{% static 'image/home/uslugi2.png' %}">
+			    			<span class="icon-calendar-1"></span>
 			    		</div>
 			    		<p>{% trans "Дни приёма руководства" %}</p>
 			    	</aside>
@@ -166,7 +168,7 @@
 			    <div class="item">
 			    	<aside class="uslugi-in">
 			    		<div class="us-icon-div">
-			    			<img src="{% static 'image/home/uslugi3.png' %}">
+			    			<span class="icon-calculating"></span>
 			    		</div>
 			    		<p>{% trans "Калькулятор штрафов" %}</p>
 			    	</aside>
@@ -174,7 +176,7 @@
 			    <div class="item">
 			    	<aside class="uslugi-in">
 			    		<div class="us-icon-div">
-			    			<img src="{% static 'image/home/uslugi4.png' %}">
+			    			<span class="icon-file"></span>
 
 			    		</div>
 			    		<p>{% trans "Просмотр штрафов ПДД" %}</p>
@@ -183,7 +185,7 @@
 			    <div class="item">
 			    	<aside class="uslugi-in">
 			    		<div class="us-icon-div">
-			    			<img src="{% static 'image/home/uslugi5.png' %}">
+			    			<span class="icon-auction"></span>
 			    		</div>
 			    		<p>{% trans "Онлайн аукцион" %} <br> {% trans "автономеров" %}</p>
 			    	</aside>
@@ -191,7 +193,7 @@
 			    <div class="item">
 			    	<aside class="uslugi-in">
 			    		<div class="us-icon-div">
-			    			<img src="{% static 'image/home/uslugi1.png' %}">
+			    			<span class="icon-document"></span>
 			    		</div>
 			    		<p>{% trans "Запись на приём к" %}<br> {% trans "руководству" %}</p>
 			    	</aside>
@@ -199,7 +201,7 @@
 			    <div class="item">
 			    	<aside class="uslugi-in">
 			    		<div class="us-icon-div">
-			    			<img src="{% static 'image/home/uslugi2.png' %}">
+			    			<span class="icon-calendar-1"></span>
 			    		</div>
 			    		<p>{% trans "Дни приёма руководства" %}</p>
 			    	</aside>
@@ -207,7 +209,7 @@
 			    <div class="item">
 			    	<aside class="uslugi-in">
 			    		<div class="us-icon-div">
-			    			<img src="{% static 'image/home/uslugi3.png' %}">
+			    			<span class="icon-calculating"></span>
 			    		</div>
 			    		<p>{% trans "Калькулятор штрафов" %}</p>
 			    	</aside>
@@ -215,7 +217,7 @@
 			    <div class="item">
 			    	<aside class="uslugi-in">
 			    		<div class="us-icon-div">
-			    			<img src="{% static 'image/home/uslugi4.png' %}">
+			    			<span class="icon-file"></span>
 			    		</div>
 			    		<p>{% trans "Просмотр штрафов ПДД" %}</p>
 			    	</aside>
@@ -223,7 +225,7 @@
 			    <div class="item">
 			    	<aside class="uslugi-in">
 			    		<div class="us-icon-div">
-			    			<img src="{% static 'image/home/uslugi5.png' %}">
+			    			<span class="icon-auction"></span>
 			    		</div>
 			    		<p>{% trans "Онлайн аукцион" %}<br> {% trans "автономеров" %}</p>
 			    	</aside>
@@ -337,7 +339,7 @@
 			<div class="heading-hr"></div>
 		</div>
 		<div class="container con-pad">
-			<div class="row">
+			<div class="row peres-row">
 				<div class="col-lg-4 peres-left">
 					<ul class="peres-ul">
                         {% for c in cities %}
@@ -541,7 +543,7 @@
 			<h4>{%  trans "Полезные ссылки" %}</h4>
 			<div class="heading-hr"></div>
 		</div>
-		<div class="container con-pad">
+		<div class="container con-pad con-row">
 			<div class="owl-carousel owl-theme">
 			    <div class="item">
 			    	<aside class="polez-inner">
