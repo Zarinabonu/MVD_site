@@ -156,7 +156,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 	$('button.m-btn').click(function() {
-		$('section.hmobil').fadeToggle()
+		$('section.hmobil').toggleClass('click-menu')
 	})
 	$('button.header-btn').click(function() {
 		$('section.full-menu').fadeToggle('fast')
@@ -164,13 +164,11 @@ $(document).ready(function() {
 })
 
 $(document).ready(function() {
-	$('button.press-btn').click(function() {
-		$('ul.press-ul').animate({
-			height:'toggle'
-		})
+	$('li.mob-li').click(function() {
+		// $('ul.padmenu').css({'visibility':'hidden','opacity':'0'})
+		$(this).children('ul.padmenu').toggleClass('click-ul')
 
-		$(this).children(".fa").toggleClass('arrow-reverse')
-
+		$(this).children('button.m-all').children('i.fa').toggleClass('arrow-reverse')
 	})
 })
 
