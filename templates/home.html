@@ -107,69 +107,7 @@
 			  </a>
 			</div>
 		</div>
-		<div class="banner-top">
-			<div class="ban-left">
-				<div>
-					<a href="#">
-						<i class="fa fa-facebook" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-twitter" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-telegram" aria-hidden="true"></i>
-					</a>
-					<a class="link-phone" href="#">
-						<i class="fa fa-phone" aria-hidden="true"></i>
-						{% trans "По происшествиям 102" %}
-					</a>
-				</div>
-			</div>
-			<div class="ban-center">
-				<div class="ban-center-top">
-					<a href="#">
-						<img src="{% static 'image/home/logo.png' %}">
-					</a>
-				</div>
-				<div class="ban-center-bottom">
-					<h3>
-						{% trans "МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ РЕСПУБЛИКИ УЗБЕКИСТАН" %}
-					</h3>
-				</div>
-			</div>
-			<div class="ban-right">
-				<div class="ban-right-inner">
-					<div>
-						<button class="dinamik ban-btn">
-							<i class="fa fa-volume-up" aria-hidden="true"></i>
-						</button>
-						<button class="mobile ban-btn">
-							<i class="fa fa-mobile" aria-hidden="true"></i>
-						</button>
-						<button class="eyes ban-btn">
-							<img src="{% static 'image/home/eyes.png' %}">
-						</button>
-					</div>
-					<form class="search-form">
-						<button>
-							<i class="fa fa-search" aria-hidden="true"></i>
-						</button>
-						<input type="text" name="search" placeholder="Поиск">
-					</form>
-					<div class="lang">
-						<div class="lang-show">
-							<img src="{% static 'image/home/lang.png' %}">
-							<a class="lang-link" href="#">Русский</a>
-							<i class="fa fa-angle-down" aria-hidden="true"></i>
-						</div>
-						<ul class="lang-hide">
-							<li><a class="lang-link-hide" href="#">English</a></li>
-							<li><a class="lang-link-hide" href="#">O'zbek</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+
 	</section>
 	<section class="news">
 		<div class="heading">
@@ -183,13 +121,13 @@
 				<div class="col-lg-6">
 					<div class="news-inner">
 						<h5>{{ type }}</h5>
-					                            {% for news in type.news_set.all %}
-								    	<div class="news-item">
+                            {% for news in type.news_set.all %}
+                                <div class="news-item">
 
-							<button class="button-yellow">{{ news.created|date:"d m Y"}}</button>
-							<p>{{ news.title_name_ru }}</p>
-							<a class="readmore" href="#">{% trans "Подробнее" %}</a>
-	</div>
+                                    <button class="button-yellow">{{ news.created|date:"d m Y"}}</button>
+                                    <p>{{ news.title_name_ru }}</p>
+                                    <a class="readmore" href="#">{% trans "Подробнее" %}</a>
+	                            </div>
                             {% endfor %}
 					
 

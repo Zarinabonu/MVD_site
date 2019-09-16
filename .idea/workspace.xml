@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fa441e41-3ef0-4376-8c1b-a16087f2c35d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/newspodrobni.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newspodrobni.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +27,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../uzhpro" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -102,8 +99,25 @@
       <workItem from="1568096355460" duration="21832000" />
       <workItem from="1568159681262" duration="5576000" />
       <workItem from="1568189582576" duration="16704000" />
-      <workItem from="1568357645828" duration="19239000" />
+      <workItem from="1568357645828" duration="19412000" />
+      <workItem from="1568437485981" duration="4164000" />
+      <workItem from="1568442537163" duration="3302000" />
     </task>
+    <task id="LOCAL-00001" summary="aaa">
+      <created>1568439602896</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568439602896</updated>
+    </task>
+    <task id="LOCAL-00002" summary="aaa">
+      <created>1568439649535</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568439649535</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,5 +135,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="aaa" />
+    <option name="LAST_COMMIT_MESSAGE" value="aaa" />
   </component>
 </project>

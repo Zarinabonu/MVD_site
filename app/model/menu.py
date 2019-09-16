@@ -30,10 +30,7 @@ class   Submenu(models.Model):
 
 
 class Type(models.Model):
-    name_ru = models.CharField(max_length=100, null=True, blank=True)
-    name_uz = models.CharField(max_length=100, null=True, blank=True)
-
-
+    list = models.
     class Meta:
         ordering = ('-id',)
         db_table = 'type'
@@ -41,6 +38,32 @@ class Type(models.Model):
     def __str__(self):
         return self.name_ru
 
+
+class List_menu(models.Model):
+    title_ru = models.CharField(max_length=100, null=True, blank=True)
+    title_uz = models.CharField(max_length=100, null=True, blank=True)
+    short_content_ru = models.TextField(null=True, blank=True)
+    short_content_uz = models.TextField(null=True, blank=True)
+    full_content_uz = models.TextField(null=True, blank=True)
+    full_content_ru = models.TextField(null=True, blank=True)
+    fio = models.TextField(null=True, blank=True)
+    phone = models.IntegerField(null=True, blank=True)
+    url = models.TextField(null=True, blank=True)
+    view = models.IntegerField(null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+    file = models.FileField(null=True, blank=True)
+
+
+class Detail_menu(models.Model):
+    title_ru = models.CharField(max_length=100, null=True, blank=True)
+    title_uz = models.CharField(max_length=100, null=True, blank=True)
+    short_content_ru = models.TextField(null=True, blank=True)
+    short_content_uz = models.TextField(null=True, blank=True)
+    full_content_uz = models.TextField(null=True, blank=True)
+    full_content_ru = models.TextField(null=True, blank=True)
+    file = models.FileField(null=True, blank=True)
+    view = models.IntegerField(null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
 
 class Type_news(models.Model):
     name_ru = models.CharField(max_length=100, null=True, blank=True)
@@ -98,6 +121,8 @@ class Criminal(models.Model):
     short_content_uz = models.TextField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     created = models.DateField(auto_now_add=True)
+
+
 
 
 
